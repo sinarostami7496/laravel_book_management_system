@@ -141,7 +141,8 @@ export default {
       justify-content: space-between;
 
       .nav-left {
-        color: #545c64;
+        // color: #545c64;
+        color: #fff;
         font-weight: 600;
       }
 
