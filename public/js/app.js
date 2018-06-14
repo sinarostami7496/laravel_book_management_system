@@ -19295,7 +19295,7 @@ exports = module.exports = __webpack_require__(13)(false);
 
 
 // module
-exports.push([module.i, "\n.el-col[data-v-c128e3fe] {\n  margin-top: 10px;\n  height: 60px;\n  background-color: #eee;\n}\n.el-col .el-form[data-v-c128e3fe] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    margin-top: 10px;\n}\n.el-col .el-form .el-input[data-v-c128e3fe] {\n      margin-left: 10px;\n      width: 20%;\n}\n.el-col .el-form .el-button[data-v-c128e3fe] {\n      margin-left: 10px;\n      background-color: #dd21a5;\n      color: #fff;\n}\n.el-col .deleteButton[data-v-c128e3fe] {\n    background-color: #dd21a5;\n}\n.el-col .operation[data-v-c128e3fe] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.el-col .toolbar[data-v-c128e3fe] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.el-col .toolbar .el-button[data-v-c128e3fe] {\n      background-color: #dd21a5;\n}\n", ""]);
+exports.push([module.i, "\n.el-col[data-v-c128e3fe] {\n  margin-top: 10px;\n  height: 60px;\n  background-color: #eee;\n}\n.el-col .el-form[data-v-c128e3fe] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    margin-top: 10px;\n}\n.el-col .el-form .el-input[data-v-c128e3fe] {\n      margin-left: 10px;\n      width: 20%;\n}\n.el-col .el-form .el-button[data-v-c128e3fe] {\n      margin-left: 10px;\n      background-color: #dd21a5;\n      color: #fff;\n}\n.el-col .deleteButton[data-v-c128e3fe] {\n    background-color: #dd21a5;\n}\n.el-col .operation[data-v-c128e3fe] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.el-col .toolbar[data-v-c128e3fe] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding-left: 10px;\n}\n.el-col .toolbar .el-button[data-v-c128e3fe] {\n      background-color: #dd21a5;\n}\n", ""]);
 
 // exports
 
@@ -19348,49 +19348,56 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   data: function data() {
     return {
       currentPage1: 4,
-      userData: [{
-        sno: '201540292',
-        username: 'summertzz',
-        sex: '女',
-        age: '18',
-        birth: '2000-8-3',
-        email: '1242355@qq.com'
-      }, {
-        sno: '201540292',
-        username: 'summertzz',
-        sex: '女',
-        age: '18',
-        birth: '2000-8-3',
-        email: '1242355@qq.com'
-      }, {
-        sno: '201540292',
-        username: 'summertzz',
-        sex: '女',
-        age: '18',
-        birth: '2000-8-3',
-        email: '1242355@qq.com'
-      }, {
-        sno: '201540292',
-        username: 'lsbbd',
-        sex: '女',
-        age: '18',
-        birth: '2000-8-3',
-        email: '1242355@qq.com'
-      }, {
-        sno: '201540292',
-        username: 'lsbbd',
-        sex: '女',
-        age: '18',
-        birth: '2000-8-3',
-        email: '1242355@qq.com'
-      }, {
-        sno: '201540292',
-        username: 'summertzz',
-        sex: '女',
-        age: '18',
-        birth: '2000-8-3',
-        email: '1242355@qq.com'
-      }]
+      userData: [
+        //  {
+        //    sno: '201540292',
+        //    username: 'summertzz',
+        //    sex: '女',
+        //    age: '18',
+        //    birth: '2000-8-3',
+        //    email: '1242355@qq.com'
+        //  },
+        // {
+        //   sno: '201540292',
+        //   username: 'summertzz',
+        //   sex: '女',
+        //   age: '18',
+        //   birth: '2000-8-3',
+        //   email: '1242355@qq.com'
+        // },
+        // {
+        //   sno: '201540292',
+        //   username: 'summertzz',
+        //   sex: '女',
+        //   age: '18',
+        //   birth: '2000-8-3',
+        //   email: '1242355@qq.com'
+        // },
+        // {
+        //   sno: '201540292',
+        //   username: 'lsbbd',
+        //   sex: '女',
+        //   age: '18',
+        //   birth: '2000-8-3',
+        //   email: '1242355@qq.com'
+        // },
+        // {
+        //   sno: '201540292',
+        //   username: 'lsbbd',
+        //   sex: '女',
+        //   age: '18',
+        //   birth: '2000-8-3',
+        //   email: '1242355@qq.com'
+        // },
+        // {
+        //   sno: '201540292',
+        //   username: 'summertzz',
+        //   sex: '女',
+        //   age: '18',
+        //   birth: '2000-8-3',
+        //   email: '1242355@qq.com'
+        // }
+      ]
     };
   },
 
@@ -19447,7 +19454,8 @@ var render = function() {
             "highlight-current-row": "",
             data: _vm.userData,
             "tooltip-effect": "dark",
-            "default-sort": { prop: "sno", order: "descending" }
+            "default-sort": { prop: "sno", order: "descending" },
+            fit: ""
           },
           on: {
             "select-change": function($event) {
@@ -19491,7 +19499,7 @@ var render = function() {
           _vm._v(" "),
           _c("el-table-column", {
             staticClass: "operation",
-            attrs: { label: "操作", width: "180" },
+            attrs: { label: "操作", align: "right" },
             scopedSlots: _vm._u([
               {
                 key: "default",

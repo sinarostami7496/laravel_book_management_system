@@ -9,7 +9,7 @@
      </el-form>
    </el-col>
    <!-- 列表 -->
-   <el-table highlight-current-row ref="mutipleTable" :data="userData" tooltip-effect="dark" style="width:100%" @select-change="handleSelectChange()" :default-sort="{prop: 'sno',order: 'descending'}">
+   <el-table highlight-current-row ref="mutipleTable" :data="userData" tooltip-effect="dark" style="width:100%" @select-change="handleSelectChange()" :default-sort="{prop: 'sno',order: 'descending'}" fit>
      <el-table-column type="selection"  width="55"></el-table-column>
      <el-table-column type="index" width="60"></el-table-column>
      <el-table-column prop="sno" label="学号"  sortable width="120"></el-table-column>
@@ -18,7 +18,7 @@
      <el-table-column prop="age" label="年龄"  sortable width="100"></el-table-column>
      <el-table-column prop="birth" label="生日"  sortable width="120"></el-table-column>
      <el-table-column prop="email" label="邮箱" width="180"></el-table-column>
-     <el-table-column label="操作" width="180" class="operation">
+     <el-table-column label="操作" class="operation" align="right">
        <template slot-scope="scope">
          <el-button size="small"  @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
          <el-button size="small"  type="danger" class="deleteButton" @click="handleDel(scope.$index, scope.row)">删除</el-button>
@@ -41,54 +41,55 @@
      return {
        currentPage1: 4,
        userData: [
-         {
-           sno: '201540292',
-           username: 'summertzz',
-           sex: '女',
-           age: '18',
-           birth: '2000-8-3',
-           email: '1242355@qq.com'
-         },
-        {
-          sno: '201540292',
-          username: 'summertzz',
-          sex: '女',
-          age: '18',
-          birth: '2000-8-3',
-          email: '1242355@qq.com'
-        },
-        {
-          sno: '201540292',
-          username: 'summertzz',
-          sex: '女',
-          age: '18',
-          birth: '2000-8-3',
-          email: '1242355@qq.com'
-        },
-        {
-          sno: '201540292',
-          username: 'lsbbd',
-          sex: '女',
-          age: '18',
-          birth: '2000-8-3',
-          email: '1242355@qq.com'
-        },
-        {
-          sno: '201540292',
-          username: 'lsbbd',
-          sex: '女',
-          age: '18',
-          birth: '2000-8-3',
-          email: '1242355@qq.com'
-        },
-        {
-          sno: '201540292',
-          username: 'summertzz',
-          sex: '女',
-          age: '18',
-          birth: '2000-8-3',
-          email: '1242355@qq.com'
-        }]
+        //  {
+        //    sno: '201540292',
+        //    username: 'summertzz',
+        //    sex: '女',
+        //    age: '18',
+        //    birth: '2000-8-3',
+        //    email: '1242355@qq.com'
+        //  },
+        // {
+        //   sno: '201540292',
+        //   username: 'summertzz',
+        //   sex: '女',
+        //   age: '18',
+        //   birth: '2000-8-3',
+        //   email: '1242355@qq.com'
+        // },
+        // {
+        //   sno: '201540292',
+        //   username: 'summertzz',
+        //   sex: '女',
+        //   age: '18',
+        //   birth: '2000-8-3',
+        //   email: '1242355@qq.com'
+        // },
+        // {
+        //   sno: '201540292',
+        //   username: 'lsbbd',
+        //   sex: '女',
+        //   age: '18',
+        //   birth: '2000-8-3',
+        //   email: '1242355@qq.com'
+        // },
+        // {
+        //   sno: '201540292',
+        //   username: 'lsbbd',
+        //   sex: '女',
+        //   age: '18',
+        //   birth: '2000-8-3',
+        //   email: '1242355@qq.com'
+        // },
+        // {
+        //   sno: '201540292',
+        //   username: 'summertzz',
+        //   sex: '女',
+        //   age: '18',
+        //   birth: '2000-8-3',
+        //   email: '1242355@qq.com'
+        // }
+       ]
      }
    },
 
@@ -151,6 +152,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding-left: 10px;
 
     .el-button {
        background-color: #dd21a5;
