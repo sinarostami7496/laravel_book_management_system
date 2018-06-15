@@ -17,14 +17,14 @@ class RouteServiceProvider extends ServiceProvider
     protected $namespace = 'App\Http\Controllers';
 
     /**
-     * Define your route model bindings, pattern filters, etc.
+     * Define your route model bindings, pattern filters, etc.全局约束
      *
      * @return void
      */
     public function boot()
     {
         //
-
+        // Route::pattern('id', '[0-9]{1,3}');
         parent::boot();
     }
 

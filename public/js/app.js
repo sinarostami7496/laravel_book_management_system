@@ -19348,56 +19348,57 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   data: function data() {
     return {
       currentPage1: 4,
-      userData: [
-        //  {
-        //    sno: '201540292',
-        //    username: 'summertzz',
-        //    sex: '女',
-        //    age: '18',
-        //    birth: '2000-8-3',
-        //    email: '1242355@qq.com'
-        //  },
-        // {
-        //   sno: '201540292',
-        //   username: 'summertzz',
-        //   sex: '女',
-        //   age: '18',
-        //   birth: '2000-8-3',
-        //   email: '1242355@qq.com'
-        // },
-        // {
-        //   sno: '201540292',
-        //   username: 'summertzz',
-        //   sex: '女',
-        //   age: '18',
-        //   birth: '2000-8-3',
-        //   email: '1242355@qq.com'
-        // },
-        // {
-        //   sno: '201540292',
-        //   username: 'lsbbd',
-        //   sex: '女',
-        //   age: '18',
-        //   birth: '2000-8-3',
-        //   email: '1242355@qq.com'
-        // },
-        // {
-        //   sno: '201540292',
-        //   username: 'lsbbd',
-        //   sex: '女',
-        //   age: '18',
-        //   birth: '2000-8-3',
-        //   email: '1242355@qq.com'
-        // },
-        // {
-        //   sno: '201540292',
-        //   username: 'summertzz',
-        //   sex: '女',
-        //   age: '18',
-        //   birth: '2000-8-3',
-        //   email: '1242355@qq.com'
-        // }
-      ]
+      userData: []
+      //  userData: [
+      //    {
+      //      sno: '201540292',
+      //      username: 'summertzz',
+      //      sex: '女',
+      //      age: '18',
+      //      birth: '2000-8-3',
+      //      email: '1242355@qq.com'
+      //    },
+      //   {
+      //     sno: '201540292',
+      //     username: 'summertzz',
+      //     sex: '女',
+      //     age: '18',
+      //     birth: '2000-8-3',
+      //     email: '1242355@qq.com'
+      //   },
+      //   {
+      //     sno: '201540292',
+      //     username: 'summertzz',
+      //     sex: '女',
+      //     age: '18',
+      //     birth: '2000-8-3',
+      //     email: '1242355@qq.com'
+      //   },
+      //   {
+      //     sno: '201540292',
+      //     username: 'lsbbd',
+      //     sex: '女',
+      //     age: '18',
+      //     birth: '2000-8-3',
+      //     email: '1242355@qq.com'
+      //   },
+      //   {
+      //     sno: '201540292',
+      //     username: 'lsbbd',
+      //     sex: '女',
+      //     age: '18',
+      //     birth: '2000-8-3',
+      //     email: '1242355@qq.com'
+      //   },
+      //   {
+      //     sno: '201540292',
+      //     username: 'summertzz',
+      //     sex: '女',
+      //     age: '18',
+      //     birth: '2000-8-3',
+      //     email: '1242355@qq.com'
+      //   }
+      //  ]
     };
   },
 
