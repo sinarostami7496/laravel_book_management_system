@@ -22,10 +22,60 @@
 
 4. 路由参数
 
-  动态路由由大花括号表示,回调函数的参数顺序跟动态路由的参数顺序有关。参数不能有横线,可以有数字，但不能用数字开头，可以包含下划线。
+  4.1 动态路由由大花括号表示,回调函数的参数顺序跟动态路由的参数顺序有关。参数不能有横线,可以有数字，但不能用数字开头，可以包含下划线。
  
   Route::get('/user{id}', function($id) {
     return $id;
   });
 
-5. 
+  4.2 可选参数
+
+  Route::get('/user{id?}', function($id = null) {
+    return $id;
+    <!-- 当id为空时，没有输出，当id不为空时，返回id，简化代码，统一处理 -->
+  });
+
+  4.3 参数命名的时候可以使用正则表达式
+
+  Route::get('/user{name}', function($name) {
+    return $name;
+  })->where('name', '[A-Za-z]+');
+
+  4.4 全局约束
+
+  可以在 RouterServicePriver 中,在 boot 方法中设置 id 。
+
+  public function boot () {
+    Route::pattern(‘id’, [0-9]+);
+    parent::boot();
+  };
+
+5. 命名路由
+
+Route::get('user/profile', function() {
+  return $profile;
+})->name('profile');
+
+6. 路由分组
+
+Route::middleware(['first', 'second'])->group(function() {
+  Route::get('/', function(){
+    <!--  -->
+  })
+
+  Route::get('/user', function() {
+    <!--  -->
+  });
+});
+
+7. 费率限制
+
+Route::middleware('ath:api', 'throttle: 60, 1')->group(function() {
+  Route::get('/user', function() {
+    <!--  -->
+  })
+})
+ 
+ ### 中间件
+ 
+
