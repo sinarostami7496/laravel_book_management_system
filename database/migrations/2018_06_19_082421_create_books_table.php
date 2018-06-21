@@ -35,7 +35,7 @@ class CreateBooksTable extends Migration
             $table->text('author_intro')->nullable();
             $table->text('summary')->nullable();
             $table->string('catalog')->nullable();
-            $table->decimal('ebook_price', 6, 2)->nullable();
+            $table->boolean('is_store');
             $table->timestamps();
             
         });

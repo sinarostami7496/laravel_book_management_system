@@ -20,11 +20,11 @@ class CreateUsersTable extends Migration
             $table->string('email')->unqiue();
             $table->string('avatar')->nullable();
             $table->string('alt')->nullable();
-            $table->string('relation');
             $table->dateTime('created');
             $table->string('loc_id');
             $table->string('loc_name');
             $table->text('desc');
+            $table->string('password');
             $table->timestamps();
         });
     }
