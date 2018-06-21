@@ -20,7 +20,7 @@ class BookController extends Controller
             'per_page' => '',
             'order' => '',
             'sort_by' => '',
-        ])
+        ]);
     }
 
     /**
@@ -91,7 +91,7 @@ class BookController extends Controller
             'author_intro',
             'summary',
             'catalog',
-            'ebook_price',
+            'is_store',
         ]);
         
         // 将上传的json数据序列化才能传入数据库

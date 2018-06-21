@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use App\Admin;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,6 +13,16 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
     {
         //
     }
@@ -27,43 +37,32 @@ class UserController extends Controller
     {
         //验证请求参数
         $request->validate([
-            'id' => 'required|integer|unique:users,id',
-            'uid' => 'required|unique:users|string',
+            'id' => 'required|integer|unique:admins,id',
+            'aid' => 'required|unique:admins,aid|string',
             'name' => 'required|string',
+            'password' => 'required|regex:/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/',
             'email' => 'required|email',
-            'avatar' => 'url',
-            'alt' => 'url' ,
-            'created' => 'required|date',
-            // 'loc_id' => 'required|',
-            // 'loc_name' => 'required|',
-            // 'desc' => 'text',
-            // 密码只能是6-8位的字母和数字组合构成
-            'password' => 'required|regex:/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,8}$/',
+            'authority' => 'required|string',
         ]);
         // 存入数据库
-        $user = new User;
+        $admin = new Admin;
         $form = $request->only([
-             'id',
-             'uid',
-             'name',
-             'email',
-             'avatar',
-             'alt',
-             'created',
-             'loc_id',
-             'loc_name',
-             'desc',
-             'password',
+            'id',
+            'aid',
+            'name',
+            'password',
+            'email',
+            'authority',
         ]);
         
         foreach($form as $key => $value) {
-            $user ->$key = $value;
+            $admin ->$key = $value;
         }
 
-        $user->save();
+        $admin->save();
         // 返回数据
         return [
-            'code' => '200ok'
+            'code' => '200ok successful'
         ];
     }
 
@@ -77,6 +76,7 @@ class UserController extends Controller
     {
         //
     }
+
 
     /**
      * Update the specified resource in storage.

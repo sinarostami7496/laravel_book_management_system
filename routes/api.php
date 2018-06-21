@@ -17,4 +17,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// 用户表路由
 Route::apiResource('/book', 'BookController');
+
+// 图书表路由
+Route::apiResource('/user', 'UserController');
+
+// 管理员路由
+Route::apiResource('/admin', 'AdminController');
