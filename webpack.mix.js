@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+let mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -11,21 +11,22 @@ let mix = require('laravel-mix');
  |
  */
 
-function resolve (dir) {
-  return path.join(__dirname, 'resources/assets', dir)
+function resolve(dir) {
+  return path.join(__dirname, "resources/assets", dir);
 }
 
 mix.webpackConfig({
   resolve: {
     alias: {
-      '@': resolve('js')
+      "@": resolve("js")
     }
   }
-})
+});
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css')
-   .browserSync({
-     proxy: 'localhost:2019',
-     notify: false
-   })
+mix
+  .js("resources/assets/js/app.js", "public/js")
+  .sass("resources/assets/sass/app.scss", "public/css")
+  .browserSync({
+    proxy: "localhost:2019",
+    notify: true
+  });

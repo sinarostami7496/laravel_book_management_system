@@ -1,7 +1,5 @@
 <template>
-  <el-container>
-    home1
-  </el-container>
+
 </template>
 
 <script>

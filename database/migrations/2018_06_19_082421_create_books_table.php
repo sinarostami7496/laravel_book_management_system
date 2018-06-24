@@ -35,7 +35,7 @@ class CreateBooksTable extends Migration
             $table->text('author_intro')->nullable();
             $table->text('summary')->nullable();
             $table->string('catalog')->nullable();
-            $table->boolean('is_store');
+            $table->boolean('is_store')->default(true);
             $table->timestamps();
             
         });

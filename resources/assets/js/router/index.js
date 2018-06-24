@@ -1,42 +1,87 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-// 管理页面布局
-import Admin from '../pages/admin'
-// 管理界面子路由
-import AdminHome from '../pages/admin/home'
-import AdminUser from '../pages/admin/user'
-import AdminTable from '../pages/admin/table'
+import Vue from "vue";
+import Router from "vue-router";
+// 用户界面组件
+import UserHome from "@/pages/home/index";
+import UserSignin from "@/pages/home/signin";
+import UserSignup from "@/pages/home/signup";
 
-Vue.use(Router)
+// 管理界面组件
+import AdminHome from "@/pages/admin/index";
+import AdminSignin from "@/pages/admin/signin";
+import AdminBook from "@/pages/admin/book";
+import AdminBorrow from "@/pages/admin/borrow";
+import AdminUser from "@/pages/admin/user/index";
+import AdminCommonUser from "@/pages/admin/user/commonUser";
+import AdminAdminUser from "@/pages/admin/user/adminUser";
+
+import AdminComment from "@/pages/admin/comment";
+
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/admin/admin',
-      component: Admin
+      path: "/",
+      name: "UserHome",
+      component: UserHome
     },
     {
-      path: '/admin',
-      component: Admin,
+      path: "/signin",
+      name: "/UserSignin",
+      component: UserSignin
+    },
+    {
+      path: "/signup",
+      name: "/UserSignup",
+      component: UserSignup
+    },
+    {
+      path: "/admin",
+      component: AdminHome,
       children: [
         {
-          path: '',
-          name: 'Home',
-          component: AdminHome
+          path: "",
+          name: "AdminHome",
+          component: AdminAdminUser
         },
-
         {
-          path: 'user',
-          name: 'User',
-          component: AdminUser
+          path: "user",
+          name: "AdminUser",
+          component: AdminUser,
+          children: [
+            {
+              path: "common",
+              name: "AdminCommonUser",
+              component: AdminCommonUser
+            },
+            {
+              path: "admin",
+              name: "AdminAdminUser",
+              component: AdminAdminUser
+            }
+          ]
         },
-
         {
-          path: 'table',
-          name: 'Table',
-          component: AdminTable
+          path: "book",
+          name: "AdminBook",
+          component: AdminBook
+        },
+        {
+          path: "borrow",
+          name: "AdminBorrow",
+          component: AdminBorrow
+        },
+        {
+          path: "comment",
+          name: "AdminComment",
+          component: AdminComment
         }
       ]
+    },
+    {
+      path: "/admin/signin",
+      name: "AdminSignin",
+      component: AdminSignin
     }
   ]
-})
+});
