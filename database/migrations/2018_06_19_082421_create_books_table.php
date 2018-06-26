@@ -30,14 +30,15 @@ class CreateBooksTable extends Migration
             $table->json('rating')->nullable();
             $table->json('tags')->nullable();
             $table->string('binding')->nullable();
-            $table->decimal('price', 6, 2)->nullable();
+            // $table->decimal('price', 6, 2)->nullable();
+            $table->string('price')->nullable();
             $table->integer('pages')->nullable();
             $table->text('author_intro')->nullable();
             $table->text('summary')->nullable();
-            $table->string('catalog')->nullable();
+            $table->text('catalog')->nullable();
             $table->boolean('is_store')->default(true);
             $table->timestamps();
-            
+
         });
     }
 

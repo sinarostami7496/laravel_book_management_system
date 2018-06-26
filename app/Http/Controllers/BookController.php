@@ -18,18 +18,60 @@ class BookController extends Controller
     {
         //验证请求参数
         $request->validate([
+
+            // 验证分页请求参数
             'page' => 'integer|gte:1',
             'per_page' => 'integer|gte:1',
+
+            // 验证图书请求参数
             'sort_by' => 'in:id,isbn10,isbn13,title,publisher,is_store',
-            'order' => 'in:desc,asc'
-            
+
+            'order' => 'in:desc,asc',
+
+            'id' => 'exists:books,id',
+            // 
+            'isbn10' => ['string|size:10', Rule::unique('books', 'isbn10')->ignore($request->isbn10, 'isbn10')],
+            'isbn13' => ['digits:13', Rule::unique('books', 'isbn13')->ignore($request->isbn13, 'isbn13')],
+            'title' => '',
+            // 'origin_title' => '',
+            // 'alt_title' => '',
+            // 'subtitle' => '',
+            // 'image' => 'url',
+            // 'images.small' => 'url',
+            // 'images.medium' => 'url',
+            // 'images.large' => 'url',
+
+            // 'author' => 'array',
+            // 'translator' => 'array',
+            // 'publisher' => '',
+            // 'pubdate' => 'date',
+            // // 'rating' => 'json',
+            // // TODO: min <= max
+            // 'rating.max' => 'integer|between:0,10',
+            // 'rating.min' => 'integer|between:0,10|lte:rating.max',
+            // 'rating.numRaters' => 'integer',
+            // 'rating.average' => 'numeric',
+
+            // 'tags.*.count' => 'integer',
+            // 'tags.*.name' => '',
+            // 'binding' => '',
+            // // 'price' => 'regex:/^[0-9]+(.[0-9]{1,2})?$/',
+            // 'price' => 'string',
+            // 'pages' => 'integer',
+            // 'is_store' => 'boolean'
         ]);
 
         // 设置默认请求返回数据
-        $page = $request->query('page',1);
-        $per_page = $request->query('per_page',1);
-        $sort_by = $request->query('sort_by','id');
-        $order = $request->query('order','asc');
+        $page = $request->query('page', 1);
+        $per_page = $request->query('per_page', 10);
+        $sort_by = $request->query('sort_by', 'id');
+        $order = $request->query('order', 'asc');
+
+        // 设置图书默认请求
+        $id = $request->query('id', '1230448');
+        $isbn10 = $request->query('isbn10', '7508314182');
+        $isbn13 = $request->query('isbn13', '9787508314181');
+
 
         $count = DB::table('books')->count();
 
@@ -66,7 +108,8 @@ class BookController extends Controller
         // 验证请求参数
         $request->validate([
             'id' => 'required|integer|unique:books,id',
-            'isbn10' => 'required|digits:10|unique:books,isbn10',
+            // 'isbn10' => 'required|digits:10|unique:books,isbn10',
+            'isbn10' => 'required|string|size:10|unique:books,isbn10',
             'isbn13' => 'required|digits:13|unique:books,isbn13',
             'title' => 'required',
             // 'origin_title' => '',
@@ -91,9 +134,10 @@ class BookController extends Controller
             'tags.*.count' => 'required|integer',
             'tags.*.name' => 'required',
             // 'binding' => '',
-            'price' => 'regex:/^[0-9]+(.[0-9]{1,2})?$/',
+            // 'price' => 'regex:/^[0-9]+(.[0-9]{1,2})?$/',
+            'price' => 'nullable|string',
             'pages' => 'integer',
-            'is_store' =>'boolean'
+            'is_store' => 'boolean'
 
             // 'author_intro' => '',
             // 'summary' => '',
@@ -135,10 +179,10 @@ class BookController extends Controller
         $form['translator'] = json_encode($form['translator']);
         $form['rating'] = json_encode($form['rating']);
         $form['tags'] = json_encode($form['tags']);
-        
+
         $book = new Book;
 
-        foreach($form as $key => $value) {
+        foreach ($form as $key => $value) {
             $book->$key = $value;
         }
 
@@ -176,7 +220,7 @@ class BookController extends Controller
         // $book['rating'] = json_decode($book['rating']);
         // $book['tags'] = json_decode($book['tags']);
 
-        foreach (['images','author', 'translator', 'rating', 'tags'] as $value) {
+        foreach (['images', 'author', 'translator', 'rating', 'tags'] as $value) {
             $book[$value] = json_decode($book[$value]);
         }
 
@@ -202,9 +246,9 @@ class BookController extends Controller
 
             'id' => 'exists:books,id',
             // 
-            'isbn10' => ['digits:10', Rule::unique('books','isbn10')->ignore($request->isbn10, 'isbn10')],
-            'isbn13' => ['digits:13', Rule::unique('books','isbn13')->ignore($request->isbn13, 'isbn13')],
-            'title'=> '',
+            'isbn10' => ['string|size:10', Rule::unique('books', 'isbn10')->ignore($request->isbn10, 'isbn10')],
+            'isbn13' => ['digits:13', Rule::unique('books', 'isbn13')->ignore($request->isbn13, 'isbn13')],
+            'title' => '',
              // 'origin_title' => '',
             // 'alt_title' => '',
             // 'subtitle' => '',
@@ -227,14 +271,15 @@ class BookController extends Controller
             'tags.*.count' => 'integer',
             'tags.*.name' => '',
             // 'binding' => '',
-            'price' => 'regex:/^[0-9]+(.[0-9]{1,2})?$/',
+            // 'price' => 'regex:/^[0-9]+(.[0-9]{1,2})?$/',
+            'price' => 'string',
             'pages' => 'integer',
-            'is_store' =>'boolean'
+            'is_store' => 'boolean'
         ]);
 
         // 
         $modi_fields = $request->only([
-             'id',       // 线上环境移除 id
+            'id',       // 线上环境移除 id
             'isbn10',
             'isbn13',
             'title',
@@ -259,7 +304,7 @@ class BookController extends Controller
         ]);
 
         $book = Book::find($id);
-        foreach($modi_fields as $key => $value) {
+        foreach ($modi_fields as $key => $value) {
             $book->$key = $value;
         }
 
