@@ -1,5 +1,5 @@
 <template>
-  <el-row :span="24" class="container">
+  <el-row :span="24" class="tzz-container">
     <!-- 导航栏 -->
     <el-col :span="24" class="header">
       <el-header>
@@ -130,7 +130,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
+.tzz-container {
   position: absolute;
 
   width: 100vw;
@@ -150,8 +150,8 @@ export default {
       justify-content: space-between;
 
       .item {
-        margin-top: 20px;
-        margin-right: 20px;
+        // margin-top: 10px;
+        // margin-right: 20px;
       }
 
       .nav-left {
@@ -173,10 +173,11 @@ export default {
         }
         img {
           display: block;
-          width: 50px;
-          height: 50px;
-          border-radius: 25px;
-          background-color: #388ab7;
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          background-color: #ec4ebd;
+          margin-right: 10px;
         }
       }
     }

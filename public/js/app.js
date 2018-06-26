@@ -20474,7 +20474,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n.container[data-v-345f4df6] {\n  position: absolute;\n  width: 100vw;\n  height: 100vh;\n}\n.container .header[data-v-345f4df6] {\n    height: 60px;\n    line-height: 60px;\n    background-color: #222;\n    color: #fff;\n}\n.container .header .el-header[data-v-345f4df6] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: justify;\n          -ms-flex-pack: justify;\n              justify-content: space-between;\n}\n.container .header .el-header .item[data-v-345f4df6] {\n        margin-top: 20px;\n        margin-right: 20px;\n}\n.container .header .el-header .nav-left[data-v-345f4df6] {\n        font-weight: 600;\n}\n.container .header .el-header .nav-right[data-v-345f4df6] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: end;\n            -ms-flex-pack: end;\n                justify-content: flex-end;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n}\n.container .header .el-header .nav-right .notify[data-v-345f4df6] {\n          margin-right: 50px;\n          font-size: 32px;\n          font-weight: 700;\n          color: #615e5e;\n}\n.container .header .el-header .nav-right img[data-v-345f4df6] {\n          display: block;\n          width: 50px;\n          height: 50px;\n          border-radius: 25px;\n          background-color: #388ab7;\n}\n.container .content[data-v-345f4df6] {\n    position: absolute;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    top: 60px;\n    left: 0;\n    bottom: 0;\n    width: 100vw;\n    background-color: #fff;\n}\n.container .content .aside[data-v-345f4df6] {\n      height: 100%;\n      background-color: #444;\n}\n.container .content .aside .el-menu[data-v-345f4df6] {\n        height: 100%;\n}\n.container .content .main[data-v-345f4df6] {\n      -webkit-box-flex: 1;\n          -ms-flex-positive: 1;\n              flex-grow: 1;\n      height: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.tzz-container[data-v-345f4df6] {\n  position: absolute;\n  width: 100vw;\n  height: 100vh;\n}\n.tzz-container .header[data-v-345f4df6] {\n    height: 60px;\n    line-height: 60px;\n    background-color: #222;\n    color: #fff;\n}\n.tzz-container .header .el-header[data-v-345f4df6] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: justify;\n          -ms-flex-pack: justify;\n              justify-content: space-between;\n}\n.tzz-container .header .el-header .nav-left[data-v-345f4df6] {\n        font-weight: 600;\n}\n.tzz-container .header .el-header .nav-right[data-v-345f4df6] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: end;\n            -ms-flex-pack: end;\n                justify-content: flex-end;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n}\n.tzz-container .header .el-header .nav-right .notify[data-v-345f4df6] {\n          margin-right: 50px;\n          font-size: 32px;\n          font-weight: 700;\n          color: #615e5e;\n}\n.tzz-container .header .el-header .nav-right img[data-v-345f4df6] {\n          display: block;\n          width: 40px;\n          height: 40px;\n          border-radius: 20px;\n          background-color: #ec4ebd;\n          margin-right: 10px;\n}\n.tzz-container .content[data-v-345f4df6] {\n    position: absolute;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    top: 60px;\n    left: 0;\n    bottom: 0;\n    width: 100vw;\n    background-color: #fff;\n}\n.tzz-container .content .aside[data-v-345f4df6] {\n      height: 100%;\n      background-color: #444;\n}\n.tzz-container .content .aside .el-menu[data-v-345f4df6] {\n        height: 100%;\n}\n.tzz-container .content .main[data-v-345f4df6] {\n      -webkit-box-flex: 1;\n          -ms-flex-positive: 1;\n              flex-grow: 1;\n      height: 100%;\n}\n", ""]);
 
 // exports
 
@@ -20623,7 +20623,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "el-row",
-    { staticClass: "container", attrs: { span: 24 } },
+    { staticClass: "tzz-container", attrs: { span: 24 } },
     [
       _c(
         "el-col",
@@ -21146,7 +21146,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n.el-tag + .el-tag[data-v-7eab0509] {\n  margin-left: 10px;\n}\n.button-new-tag[data-v-7eab0509] {\n  margin-left: 10px;\n  height: 32px;\n  line-height: 30px;\n  padding-top: 0;\n  padding-bottom: 0;\n}\n.input-new-tag[data-v-7eab0509] {\n  width: 90px;\n  margin-left: 10px;\n  vertical-align: bottom;\n}\n.el-col[data-v-7eab0509] {\n  margin-top: 10px;\n  background-clip: content-box;\n}\n.el-col .eform[data-v-7eab0509] {\n    margin-top: 10px;\n}\n.el-col .eform .einput[data-v-7eab0509] {\n      margin-left: 10px;\n      width: 20%;\n}\n.el-col .eform .ebutton[data-v-7eab0509] {\n      margin-left: 10px;\n      background-color: #388ab7;\n      color: #fff;\n}\n.el-col .operation[data-v-7eab0509] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.el-col .toolbar[data-v-7eab0509] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding-left: 10px;\n}\n", ""]);
+exports.push([module.i, "\n.el-tag + .el-tag[data-v-7eab0509] {\n  margin-left: 10px;\n}\n.button-new-tag[data-v-7eab0509] {\n  margin-left: 10px;\n  height: 32px;\n  line-height: 30px;\n  padding-top: 0;\n  padding-bottom: 0;\n}\n.input-new-tag[data-v-7eab0509] {\n  width: 90px;\n  margin-left: 10px;\n  vertical-align: bottom;\n}\n.el-col[data-v-7eab0509] {\n  margin-top: 10px;\n  background-clip: content-box;\n}\n.el-col .eform[data-v-7eab0509] {\n    margin-top: 10px;\n}\n.el-col .eform .einput[data-v-7eab0509] {\n      margin-left: 10px;\n      width: 20%;\n}\n.el-col .eform .ebutton[data-v-7eab0509] {\n      margin-left: 10px;\n      background-color: #2994f8;\n      color: #fff;\n}\n.el-col .operation[data-v-7eab0509] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.el-col .toolbar[data-v-7eab0509] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding-left: 10px;\n}\n", ""]);
 
 // exports
 
@@ -21406,15 +21406,16 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
         total: 0,
         page: 1
       },
-      bookData: {
-        id: "1230448",
-        isbn10: "7508314182",
-        isbn13: "9787508314181"
-      },
+      // bookData: {
+      //   id: "1230448",
+      //   isbn10: "7508314182",
+      //   isbn13: "9787508314181"
+      // },
+      bookData: [],
       bookValue: [],
       input1: "",
       centerDialogVisible: false,
-      currentPage1: 4,
+      currentPage1: 1,
       sizeForm: {
         name: "",
         region: "",
@@ -21596,45 +21597,44 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 
     // 根据 id 获取某一个数据
-    getSpecData: function () {
-      var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee3() {
-        var _booksData, id, isbn10, isbn13, bookParams, bookdata;
+    // async getSpecData() {
+    // 提取图书字段
+    // let {
+    //   id,
+    //   isbn10,
+    //   isbn13
+    //   // title,
+    //   // origin_title,
+    //   // alt_title,
+    //   // image,
+    //   // images,
+    //   // author,
+    //   // translator,
+    //   // publisher,
+    //   // pubdate,
+    //   // rating,
+    //   // tags,
+    //   // bing,
+    //   // price,
+    //   // pages,
+    //   // author_intro,
+    //   // summary,
+    //   // catalog,
+    //   // is_store
+    // } = this.booksData;
 
-        return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
-          while (1) {
-            switch (_context3.prev = _context3.next) {
-              case 0:
-                // 提取图书字段
-                _booksData = this.booksData, id = _booksData.id, isbn10 = _booksData.isbn10, isbn13 = _booksData.isbn13;
-                bookParams = { id: id, isbn10: isbn10, isbn13: isbn13 };
-                _context3.next = 4;
-                return __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get("/api/book/?id=1230448", {
-                  bookParams: {
-                    id: id,
-                    isbn10: isbn10,
-                    isbn13: isbn13
-                  }
-                }).then(function (res) {
-                  return res.bookdata;
-                });
+    //   let bookParams = { id, isbn10, isbn13 };
+    //   let bookdata = await axios
+    //     .get("/api/book/?id=1230448", {
+    //       bookParams: {
+    //         id,
+    //         isbn10,
+    //         isbn13
+    //       }
+    //     })
+    //     .then(res => res.bookdata);
+    // },
 
-              case 4:
-                bookdata = _context3.sent;
-
-              case 5:
-              case "end":
-                return _context3.stop();
-            }
-          }
-        }, _callee3, this);
-      }));
-
-      function getSpecData() {
-        return _ref3.apply(this, arguments);
-      }
-
-      return getSpecData;
-    }(),
     onSubmit: function onSubmit() {},
     handleEdit: function handleEdit(book) {
       this.centerDialogVisible = !this.centerDialogVisible;
@@ -21650,13 +21650,13 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
         confirmButtonText: "确定",
         cancelButtonText: "取消",
         type: "warning"
-      }).then(_asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee4() {
-        return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
+      }).then(_asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee3() {
+        return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
           while (1) {
-            switch (_context4.prev = _context4.next) {
+            switch (_context3.prev = _context3.next) {
               case 0:
-                _context4.prev = 0;
-                _context4.next = 3;
+                _context3.prev = 0;
+                _context3.next = 3;
                 return __WEBPACK_IMPORTED_MODULE_2_axios___default.a.delete("/api/book/" + id);
 
               case 3:
@@ -21667,21 +21667,21 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                 });
 
                 _this2.getData();
-                _context4.next = 10;
+                _context3.next = 10;
                 break;
 
               case 7:
-                _context4.prev = 7;
-                _context4.t0 = _context4["catch"](0);
+                _context3.prev = 7;
+                _context3.t0 = _context3["catch"](0);
 
-                console.log(_context4.t0.response);
+                console.log(_context3.t0.response);
 
               case 10:
               case "end":
-                return _context4.stop();
+                return _context3.stop();
             }
           }
-        }, _callee4, _this2, [[0, 7]]);
+        }, _callee3, _this2, [[0, 7]]);
       }))).catch(function () {
         _this2.$message({
           type: "info",
@@ -21712,10 +21712,10 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
   },
 
   created: function () {
-    var _ref5 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee5() {
-      return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee5$(_context5) {
+    var _ref4 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee4() {
+      return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee4$(_context4) {
         while (1) {
-          switch (_context5.prev = _context5.next) {
+          switch (_context4.prev = _context4.next) {
             case 0:
               //  axios.get('/api/book')
               //    .then((response) => {
@@ -21725,14 +21725,14 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
             case 1:
             case "end":
-              return _context5.stop();
+              return _context4.stop();
           }
         }
-      }, _callee5, this);
+      }, _callee4, this);
     }));
 
     function created() {
-      return _ref5.apply(this, arguments);
+      return _ref4.apply(this, arguments);
     }
 
     return created;
@@ -30380,7 +30380,7 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = "data-v-28d84b8d"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -30423,13 +30423,13 @@ var content = __webpack_require__(151);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(5)("89652826", content, false, {});
+var update = __webpack_require__(5)("aeb22dbe", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-28d84b8d\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./commonUser.vue", function() {
-     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-28d84b8d\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./commonUser.vue");
+   module.hot.accept("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-28d84b8d\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./commonUser.vue", function() {
+     var newContent = require("!!../../../../../../node_modules/css-loader/index.js!../../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-28d84b8d\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../../node_modules/sass-loader/lib/loader.js!../../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./commonUser.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -30447,7 +30447,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.container span[data-v-28d84b8d] {\n  display: block;\n  font-weight: bold;\n}\n.container .ecol[data-v-28d84b8d] {\n  margin-top: 10px;\n}\n.container .ecol .eform[data-v-28d84b8d] {\n    height: 50px;\n    padding-top: 10px;\n    background-color: #eee;\n}\n.container .ecol .eform .einput[data-v-28d84b8d] {\n      margin-left: 10px;\n      width: 20%;\n}\n.container .ecol .eform .ebutton[data-v-28d84b8d] {\n      margin-left: 10px;\n      background-color: #2994f8;\n      color: #fff;\n}\n.container .ecol .operation[data-v-28d84b8d] {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: end;\n        -ms-flex-pack: end;\n            justify-content: flex-end;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.container .toolbar[data-v-28d84b8d] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  background-color: #eee;\n}\n", ""]);
 
 // exports
 
@@ -30462,13 +30462,72 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {};
+    return {
+      userData: [],
+      currentPage: 1
+    };
   },
 
-  components: {}
+  methods: {
+    // 分页器
+    handleSizeChange: function handleSizeChange() {},
+    handleCurrentChange: function handleCurrentChange() {},
+    handleMassDelete: function handleMassDelete() {}
+  }
 });
 
 /***/ }),
@@ -30479,7 +30538,215 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("普通用户")])
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _c("span", [_vm._v("普通用户管理")]),
+      _vm._v(" "),
+      _c(
+        "el-col",
+        { staticClass: "ecol", attrs: { span: 24 } },
+        [
+          _c(
+            "el-form",
+            { staticClass: "eform", attrs: { inline: true } },
+            [
+              _c("el-input", {
+                staticClass: "einput",
+                attrs: { placeholder: "请输入用户ID" }
+              }),
+              _vm._v(" "),
+              _c("el-button", { staticClass: "ebutton" }, [
+                _c("i", { staticClass: "el-icon-search" }, [_vm._v("查询")])
+              ]),
+              _vm._v(" "),
+              _c(
+                "el-button",
+                {
+                  staticClass: "ebutton",
+                  on: {
+                    click: function($event) {
+                      _vm.handleAdd()
+                    }
+                  }
+                },
+                [_vm._v("新增")]
+              ),
+              _vm._v(" "),
+              _c(
+                "el-button",
+                {
+                  staticClass: "ebutton",
+                  on: {
+                    click: function($event) {
+                      _vm.insertMockData()
+                    }
+                  }
+                },
+                [_vm._v("插入随机数据")]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "el-table",
+        {
+          ref: "mutipleTable",
+          staticStyle: { width: "100%" },
+          attrs: {
+            data: _vm.userData,
+            "default-sort": { prop: "id", order: "ascending" },
+            "highlight-current-row": "",
+            "tooltip-effect": "dark",
+            fit: ""
+          },
+          on: {
+            "select-change": function($event) {
+              _vm.handleSelectChange()
+            }
+          }
+        },
+        [
+          _c("el-table-column", { attrs: { type: "selection", width: "55" } }),
+          _vm._v(" "),
+          _c("el-table-column", { attrs: { type: "index", width: "60" } }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { prop: "id", label: "ID", sortable: "", width: "120" }
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: {
+              prop: "uid",
+              label: "用户编号",
+              sortable: "",
+              width: "180"
+            }
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { prop: "name", label: "用户名", sortable: "", width: "180" }
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: { prop: "email", label: "邮箱", sortable: "", width: "180" }
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: {
+              prop: "created",
+              label: "注册时间",
+              sortable: "",
+              width: "150"
+            }
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            attrs: {
+              prop: "loc_name",
+              label: "居住城市名",
+              sortable: "",
+              width: "180"
+            }
+          }),
+          _vm._v(" "),
+          _c("el-table-column", {
+            staticClass: "operation",
+            attrs: { label: "操作", align: "right" },
+            scopedSlots: _vm._u([
+              {
+                key: "default",
+                fn: function(scope) {
+                  return [
+                    _c(
+                      "el-button",
+                      {
+                        attrs: { size: "small" },
+                        on: {
+                          click: function($event) {
+                            _vm.showDetail()
+                          }
+                        }
+                      },
+                      [_vm._v("详情")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "el-button",
+                      {
+                        attrs: { size: "small" },
+                        on: {
+                          click: function($event) {
+                            _vm.handleEdit(scope.row)
+                          }
+                        }
+                      },
+                      [_vm._v("编辑 ")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "el-button",
+                      {
+                        staticClass: "deleteButton",
+                        attrs: { size: "small", type: "danger" },
+                        on: {
+                          click: function($event) {
+                            _vm.handleDel(scope.row.id)
+                          }
+                        }
+                      },
+                      [_vm._v("删除")]
+                    )
+                  ]
+                }
+              }
+            ])
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "el-footer",
+        { staticClass: "toolbar" },
+        [
+          _c(
+            "el-button",
+            {
+              attrs: { type: "danger" },
+              on: {
+                click: function($event) {
+                  _vm.handleMassDelete()
+                }
+              }
+            },
+            [_vm._v("批量删除")]
+          ),
+          _vm._v(" "),
+          _c("el-pagination", {
+            attrs: {
+              "current-page": _vm.currentPage,
+              "page-sizes": [100, 200, 300, 400],
+              "page-size": 100,
+              layout: "total, sizes, prev, pager, next, jumper",
+              total: 400
+            },
+            on: {
+              "size-change": _vm.handleSizeChange,
+              "current-change": _vm.handleCurrentChange
+            }
+          })
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

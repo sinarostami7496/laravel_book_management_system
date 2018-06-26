@@ -238,15 +238,16 @@ export default {
         total: 0,
         page: 1
       },
-      bookData: {
-        id: "1230448",
-        isbn10: "7508314182",
-        isbn13: "9787508314181"
-      },
+      // bookData: {
+      //   id: "1230448",
+      //   isbn10: "7508314182",
+      //   isbn13: "9787508314181"
+      // },
+      bookData: [],
       bookValue: [],
       input1: "",
       centerDialogVisible: false,
-      currentPage1: 4,
+      currentPage1: 1,
       sizeForm: {
         name: "",
         region: "",
@@ -320,43 +321,43 @@ export default {
     },
 
     // 根据 id 获取某一个数据
-    async getSpecData() {
-      // 提取图书字段
-      let {
-        id,
-        isbn10,
-        isbn13
-        // title,
-        // origin_title,
-        // alt_title,
-        // image,
-        // images,
-        // author,
-        // translator,
-        // publisher,
-        // pubdate,
-        // rating,
-        // tags,
-        // bing,
-        // price,
-        // pages,
-        // author_intro,
-        // summary,
-        // catalog,
-        // is_store
-      } = this.booksData;
+    // async getSpecData() {
+    // 提取图书字段
+    // let {
+    //   id,
+    //   isbn10,
+    //   isbn13
+    //   // title,
+    //   // origin_title,
+    //   // alt_title,
+    //   // image,
+    //   // images,
+    //   // author,
+    //   // translator,
+    //   // publisher,
+    //   // pubdate,
+    //   // rating,
+    //   // tags,
+    //   // bing,
+    //   // price,
+    //   // pages,
+    //   // author_intro,
+    //   // summary,
+    //   // catalog,
+    //   // is_store
+    // } = this.booksData;
 
-      let bookParams = { id, isbn10, isbn13 };
-      let bookdata = await axios
-        .get("/api/book/?id=1230448", {
-          bookParams: {
-            id,
-            isbn10,
-            isbn13
-          }
-        })
-        .then(res => res.bookdata);
-    },
+    //   let bookParams = { id, isbn10, isbn13 };
+    //   let bookdata = await axios
+    //     .get("/api/book/?id=1230448", {
+    //       bookParams: {
+    //         id,
+    //         isbn10,
+    //         isbn13
+    //       }
+    //     })
+    //     .then(res => res.bookdata);
+    // },
 
     onSubmit() {},
 
@@ -467,7 +468,7 @@ export default {
 
     .ebutton {
       margin-left: 10px;
-      background-color: #388ab7;
+      background-color: #2994f8;
       color: #fff;
     }
   }
