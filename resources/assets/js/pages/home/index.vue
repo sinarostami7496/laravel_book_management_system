@@ -172,8 +172,7 @@ export default {
 
 <style lang="scss" scoped>
 .box {
-  width: 1905px;
-  height: 2367px;
+  width: 100vw;
   background: url(./image/bg.gif) 0 0 repeat;
 
   .content {

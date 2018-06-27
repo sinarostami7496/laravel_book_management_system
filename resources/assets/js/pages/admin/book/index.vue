@@ -70,7 +70,7 @@
               </el-form-item>
             </el-col>
 
-            <el-col>
+            <!-- <el-col>
               <el-form-item label="作者">
                 <el-tag 
                   :key="tag"
@@ -96,12 +96,9 @@
                 @click="showInput()"
               >+</el-button>
               </el-form-item>
-            </el-col>
+            </el-col> -->
 
-            <el-col>
-              <el-form-item label="译者">
-              </el-form-item>
-            </el-col>
+
 
             <el-col>
               <el-form-item label="出版商" >

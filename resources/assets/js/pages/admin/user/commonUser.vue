@@ -1,5 +1,67 @@
 <template>
+
 <div class="container">
+    <el-dialog title="编辑用户" :visible.sync="centerDialogVisible"  width="1000px">
+    <el-form label-position="top">
+      <el-row :gutter="30">
+        <el-col :span="12">
+          <el-row :gutter="20">
+            <el-col :span="12">
+              <el-form-item label="ID" >
+                <el-input placeholder="请输入ID"></el-input>
+              </el-form-item>
+            </el-col>
+
+            <el-col :span="12">
+              <el-form-item label="uid" >
+                <el-input  placeholder="请输入用户编号"></el-input>
+              </el-form-item>
+            </el-col>
+            
+            <el-col :span="12">
+              <el-form-item label="用户名" >
+                <el-input   placeholder="请输入用户名"></el-input>
+              </el-form-item>
+            </el-col>
+
+            <el-col :span="12">
+              <el-form-item label="邮箱" >
+                <el-input   placeholder="请输入邮箱"></el-input>
+              </el-form-item>
+            </el-col>
+
+            <el-col :span="12">
+              <el-form-item label="注册时间" >
+                <el-input   placeholder="请输入注册时间"></el-input>
+              </el-form-item>
+            </el-col>
+
+            <el-col :span="12">
+              <el-form-item label="居住城市编号" >
+                <el-input   placeholder="请输入居住城市编号"></el-input>
+              </el-form-item>
+            </el-col>
+
+            <el-col :span="12">
+              <el-form-item label="头像" >
+                <el-input   placeholder="请输入头像"></el-input>
+              </el-form-item>
+            </el-col>
+
+            <el-col :span="12">
+              <el-form-item label="居住地" >
+                <el-input  placeholder="请输入居住地" type="number"></el-input>
+              </el-form-item>
+            </el-col>
+          </el-row>
+        </el-col>
+      </el-row>
+    </el-form>
+    <span slot="footer" class="dialog-footer">
+      <el-button @click="centerDialogVisible = false">取 消</el-button>
+      <el-button type="primary" @click="centerDialogVisible = false">确 定</el-button>
+    </span>
+  </el-dialog>
     <span>普通用户管理</span>
      <el-col :span="24" class="ecol">
      <el-form :inline="true" class="eform">
@@ -24,11 +86,11 @@
      <el-table-column type="selection"  width="55"></el-table-column>
      <el-table-column type="index" width="60"></el-table-column>
      <el-table-column prop="id" label="ID"  sortable width="120"></el-table-column>
-     <el-table-column prop="uid" label="用户编号" sortable width="180"></el-table-column>
+     <el-table-column prop="uid" label="用户编号" sortable width="100"></el-table-column>
      <el-table-column prop="name" label="用户名" sortable width="180"></el-table-column>
      <el-table-column prop="email" label="邮箱"  sortable width="180"></el-table-column>
-     <el-table-column prop="password" label="密码"  sortable width="180"></el-table-column>
-     <el-table-column prop="created_at" label="注册时间"  sortable width="150"> </el-table-column>
+     <!-- <el-table-column prop="password" label="密码"  sortable width="180"></el-table-column> -->
+     <el-table-column prop="created_at" label="注册时间"  sortable width="200"> </el-table-column>
      <el-table-column prop="loc_name" label="居住城市名"  sortable width="180"></el-table-column>
      <el-table-column label="操作" class="operation" align="right">
        <template slot-scope="scope">
@@ -68,7 +130,8 @@ export default {
       per_page: 15,
       sort_by: "id",
       order: "desc",
-      total: 0
+      total: 0,
+      centerDialogVisible: false
     };
   },
   methods: {
@@ -116,6 +179,10 @@ export default {
     handleCurrentChange() {},
     handleMassDelete() {},
     handleSortChange(e) {},
+    handleEdit() {
+      this.centerDialogVisible = !this.centerDialogVisible;
+    },
+
     async insertMockData() {
       for (let item of userMockData) {
         item.password = "123tzz";
@@ -126,6 +193,33 @@ export default {
 
         await this.store(item);
       }
+    },
+    handleDel(id) {
+      this.$confirm("确认删除选中的记录吗?", "温馨提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(async () => {
+          try {
+            await axios.delete(`/api/user/${id}`);
+
+            this.$message({
+              type: "success",
+              message: "删除成功!"
+            });
+
+            this.getData();
+          } catch (error) {
+            console.log(error.response);
+          }
+        })
+        .catch(() => {
+          this.$message({
+            type: "info",
+            message: "已取消删除"
+          });
+        });
     }
   },
 

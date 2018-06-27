@@ -8,11 +8,11 @@
         </el-tooltip>
         <div class="nav-right">
             <div class="notify">
-              <el-badge :value="200" :max="99" class="item">
+              <!-- <el-badge :value="200" :max="99" class="item"> -->
                 <el-tooltip content="私信" placement="bottom">
                   <i class="el-icon-bell" @click="handleMessage()"></i>
               </el-tooltip>
-            </el-badge>
+            <!-- </el-badge> -->
           </div>
           <el-dropdown trigger="click">
             <span class="el-dropdown-link">
