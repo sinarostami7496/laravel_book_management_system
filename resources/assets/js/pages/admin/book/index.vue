@@ -8,44 +8,44 @@
           <el-row :gutter="20">
             <el-col :span="12">
               <el-form-item label="isbn10" >
-                <el-input placeholder="请输入isbn10"></el-input>
+                <el-input v-model="newBookData.isbn10" placeholder="请输入isbn10"></el-input>
               </el-form-item>
             </el-col>
 
             <el-col :span="12">
               <el-form-item label="isbn13" >
-                <el-input placeholder="请输入isbn13"></el-input>
+                <el-input v-model="newBookData.isbn13" placeholder="请输入isbn13"></el-input>
               </el-form-item>
             </el-col>
             
             <el-col :span="12">
               <el-form-item label="图书名" >
-                <el-input placeholder="请输入书名"></el-input>
+                <el-input v-model="newBookData.title" placeholder="请输入书名"></el-input>
               </el-form-item>
             </el-col>
 
             <el-col :span="12">
               <el-form-item label="子书名" >
-                <el-input placeholder="请输入子书名"></el-input>
+                <el-input v-model="newBookData.subtitle" placeholder="请输入子书名"></el-input>
               </el-form-item>
             </el-col>
 
             <el-col :span="12">
               <el-form-item label="原书名" >
-                <el-input placeholder="请输入原书名"></el-input>
+                <el-input v-model="newBookData.origin_title" placeholder="请输入原书名"></el-input>
               </el-form-item>
             </el-col>
 
             <el-col :span="12">
               <el-form-item label="别名" >
-                <el-input placeholder="请输入别名"></el-input>
+                <el-input v-model="newBookData.alt_title" placeholder="请输入别名"></el-input>
               </el-form-item>
             </el-col>
 
             <el-col :span="12">
               <el-form-item label="出版日期" >
                   <el-date-picker
-                    v-model="pubdate"
+                    v-model="newBookData.pubdate"
                     type="date"
                     placeholder="选择日期">
                  </el-date-picker>
@@ -54,19 +54,19 @@
 
             <el-col :span="12">
               <el-form-item label="封装类型" >
-                <el-input placeholder="请输入封装类型"></el-input>
+                <el-input v-model="newBookData.binding" placeholder="请输入封装类型"></el-input>
               </el-form-item>
             </el-col>
 
             <el-col :span="12">
               <el-form-item label="图书价格" >
-                <el-input placeholder="请输入价格" type="number"></el-input>
+                <el-input v-model="newBookData.price" placeholder="请输入价格" type="number"></el-input>
               </el-form-item>
             </el-col>
 
             <el-col :span="12">
               <el-form-item label="页数" >
-                <el-input placeholder="请输入页数" type="number"></el-input>
+                <el-input v-model="newBookData.pages" placeholder="请输入页数" type="number"></el-input>
               </el-form-item>
             </el-col>
 
@@ -99,13 +99,13 @@
             </el-col>
 
             <el-col>
-              <el-form-item label="译者" >
+              <el-form-item label="译者">
               </el-form-item>
             </el-col>
 
             <el-col>
               <el-form-item label="出版商" >
-                <el-input placeholder="请输入出版商"></el-input>
+                <el-input v-model="newBookData.publisher" placeholder="请输入出版商"></el-input>
               </el-form-item>
             </el-col>
           </el-row>
@@ -121,19 +121,19 @@
 
             <el-col>
               <el-form-item label="序言" >
-                <el-input placeholder="" type="textarea"></el-input>
+                <el-input v-model="newBookData.catalog" placeholder="" type="textarea"></el-input>
               </el-form-item>
             </el-col>
 
             <el-col>
               <el-form-item label="作者简介" >
-                <el-input placeholder="" type="textarea"></el-input>
+                <el-input v-model="newBookData.author_intro" placeholder="" type="textarea"></el-input>
               </el-form-item>
             </el-col>
 
             <el-col>
               <el-form-item label="图书简介" >
-                <el-input placeholder="" type="textarea"></el-input>
+                <el-input v-model="newBookData.summary" placeholder="" type="textarea"></el-input>
               </el-form-item>
             </el-col>
           </el-row>
@@ -210,6 +210,29 @@ import axios from "axios";
 export default {
   data() {
     return {
+      newBookData: {
+        isbn10: "",
+        isbn13: "",
+        title: "",
+        origin_title: "",
+        alt_title: "",
+        subtitle: "",
+        // image: '',
+        // images: '',
+        author: [],
+        translator: [],
+        publisher: "",
+        pubdate: "",
+        rating: "",
+        tags: "",
+        binding: "",
+        price: "",
+        pages: "",
+        author_intro: "",
+        summary: "",
+        catalog: "",
+        is_store: ""
+      },
       authorNames: ["tzz", "summer", "abc"],
       inputValue: "",
       inputVisible: false,
@@ -340,6 +363,7 @@ export default {
 
     handleEdit(book) {
       this.centerDialogVisible = !this.centerDialogVisible;
+      this.newBookData = Object.assign({}, book);
     },
 
     showDetail() {},

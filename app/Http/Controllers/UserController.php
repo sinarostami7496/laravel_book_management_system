@@ -58,7 +58,7 @@ class UserController extends Controller
             // 'id' => 'required|integer|unique:users',
             'uid' => 'required|string|unique:users',
             'name' => 'string',
-            'email' => 'required|email',
+            'email' => 'email',
             'avatar' => 'url',
             // 'loc_id' => 'required|',
             // 'loc_name' => 'required|',

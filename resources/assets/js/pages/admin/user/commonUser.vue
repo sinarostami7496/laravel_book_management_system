@@ -14,6 +14,7 @@
       :data="userData"
       :default-sort="{prop: 'id',order: 'ascending'}"
       @select-change="handleSelectChange()"
+      @sort-change="handleSortChange"
       highlight-current-row
       ref="mutipleTable"
       tooltip-effect="dark"
@@ -27,7 +28,7 @@
      <el-table-column prop="name" label="用户名" sortable width="180"></el-table-column>
      <el-table-column prop="email" label="邮箱"  sortable width="180"></el-table-column>
      <el-table-column prop="password" label="密码"  sortable width="180"></el-table-column>
-     <el-table-column prop="created" label="注册时间"  sortable width="150"> </el-table-column>
+     <el-table-column prop="created_at" label="注册时间"  sortable width="150"> </el-table-column>
      <el-table-column prop="loc_name" label="居住城市名"  sortable width="180"></el-table-column>
      <el-table-column label="操作" class="operation" align="right">
        <template slot-scope="scope">
@@ -42,31 +43,94 @@
   <el-footer class="toolbar">
       <el-button type="danger" @click="handleMassDelete()">批量删除</el-button>
       <el-pagination
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        :current-page="currentPage"
-        :page-sizes="[100, 200, 300, 400]"
-        :page-size="100"
+        @size-change="e => { per_page = e; getData() }"
+        @current-change="e => { page = e; getData() }"
+        :current-page="page"
+        :page-sizes="[15, 20, 30, 50]"
+        :page-size="per_page"
         layout="total, sizes, prev, pager, next, jumper"
-        :total="400">
+        :total="total">
       </el-pagination>
   </el-footer>
 </div>
 </template>
 
 <script>
+import Mock from "mockjs";
+import userMockData from "@/data/user";
+import Axios from "axios";
+
 export default {
   data() {
     return {
       userData: [],
-      currentPage: 1
+      page: 1,
+      per_page: 15,
+      sort_by: "id",
+      order: "desc",
+      total: 0
     };
   },
   methods: {
+    // API
+    async store(user) {
+      try {
+        await Axios.post("/api/user", user);
+      } catch (error) {
+        this.$message.error(`服务端错误 ${error.response.status}`);
+      }
+    },
+    async index(page, per_page, sort_by, order) {
+      try {
+        let data = await Axios.get("/api/user", {
+          params: {
+            page,
+            per_page,
+            sort_by,
+            order
+          }
+        }).then(res => res.data);
+
+        return data;
+      } catch (error) {
+        this.$message.error(`服务端错误 ${error.response.status}`);
+      }
+    },
+    update() {},
+    destroy() {},
+
+    // 获取数据
+    async getData() {
+      let data = await this.index(
+        this.page,
+        this.per_page,
+        this.sort_by,
+        this.order
+      );
+
+      this.total = data.count;
+      this.userData = data.users;
+    },
     // 分页器
     handleSizeChange() {},
     handleCurrentChange() {},
-    handleMassDelete() {}
+    handleMassDelete() {},
+    handleSortChange(e) {},
+    async insertMockData() {
+      for (let item of userMockData) {
+        item.password = "123tzz";
+        item.created_at = item.created;
+        item.email = Mock.mock({
+          email: /\d{5,10}@(gmail\.com|qq\.com|163\.com)/
+        }).email;
+
+        await this.store(item);
+      }
+    }
+  },
+
+  created() {
+    this.getData();
   }
 };
 </script>
