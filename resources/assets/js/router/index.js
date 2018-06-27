@@ -4,6 +4,7 @@ import Router from "vue-router";
 import UserHome from "@/pages/home/index";
 import UserSignin from "@/pages/home/signin";
 import UserSignup from "@/pages/home/signup";
+import Book from "@/pages/home/book";
 
 // 管理界面组件
 import AdminHome from "@/pages/admin/index";
@@ -34,6 +35,11 @@ export default new Router({
       path: "/signup",
       name: "/UserSignup",
       component: UserSignup
+    },
+    {
+      path: "/book",
+      name: "/Book",
+      component: Book
     },
     {
       path: "/admin",

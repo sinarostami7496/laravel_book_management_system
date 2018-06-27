@@ -141,9 +141,6 @@ export default {
     line-height: 60px;
     background-color: #222;
     color: #fff;
-    // background-color: #2c6285;
-    // background-color: hsl(204, 50%, 35%);
-    // background-color: #4e464b;
 
     .el-header {
       display: flex;
@@ -155,8 +152,6 @@ export default {
       }
 
       .nav-left {
-        // color: #545c64;
-        // color: #000;
         font-weight: 600;
       }
 
@@ -195,8 +190,6 @@ export default {
 
     .aside {
       height: 100%;
-      // background-color: #4e464b;
-      // background-color: hsl(204, 3%, 32%);
       background-color: #444;
 
       .el-menu {

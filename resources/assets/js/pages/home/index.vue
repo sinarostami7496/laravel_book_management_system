@@ -1,335 +1,489 @@
 <template>
-  <!-- layout-->
-<div class="container">
-  <el-container>
-  <!-- header -->
-  <el-header>
-    <el-menu 
-      class="nav"
-      mode="horizontal" 
-      @select="handleSelect()"
-      active-text-color="#f30eae"
-    >
-      <el-menu-item index="1">图书</el-menu-item>
-      <el-menu-item index="2">图书</el-menu-item>
-      <el-menu-item index="3">图书</el-menu-item>
-      <el-menu-item index="4">图书</el-menu-item>
-      <el-menu-item index="5">图书</el-menu-item>
-      <el-menu-item index="6">图书</el-menu-item>
-      <el-menu-item index="111">图书</el-menu-item>
-      <el-menu-item index="61">图书</el-menu-item>
-      <el-menu-item index="71">图书</el-menu-item>
-      <el-menu-item index="8"></el-menu-item>
-      <el-menu-item index="9"></el-menu-item>
-      <el-menu-item index="10"></el-menu-item>
-      <el-menu-item index="11"></el-menu-item>
-      <el-menu-item index="12"></el-menu-item>
-      <el-menu-item index="13"></el-menu-item>
-      <el-menu-item index="14"></el-menu-item>
-      <el-menu-item index="15"></el-menu-item>
-      <el-menu-item index="16"></el-menu-item>
-      <el-menu-item index="17"></el-menu-item>
-      <el-menu-item  class="login" index="18">登录</el-menu-item>
-      <el-menu-item  class="login" index="19">注册</el-menu-item>
-    
-    </el-menu>
-  </el-header>
-  <!-- main -->
-  <div class="main">
-    <el-main>
-    <div class="book-recomend">
-      <!-- <el-button type="danger" class="recomend">通知公告</el-button> -->
-      <el-carousel
-       :interval="5000"
-       arrow="always"
-      >
-        <el-carousel-item v-for="item in 6" :key="item">
-          <h1>{{item}}</h1>
-        </el-carousel-item>
-      </el-carousel>
+<div class="box">
+  <div class="content">
+      <!-- header -->
+    <div class="headers">
+      <div class="logo">
+        <figure>
+          <img src="./image/logo.png" alt="An awesome picture">	
+          <figcaption>the best book on the web</figcaption>
+        </figure>
+      </div>
+      <div class="login">
+        <el-menu mode="horizontal">
+          <el-menu-item index="1">register</el-menu-item>
+          <el-menu-item index="2">login</el-menu-item>
+          <el-menu-item index="3">account</el-menu-item>
+        </el-menu>
+      </div>
     </div>
-
-   <div class="books-cards">
-     <div class="title">
-       <el-button type="primary">新书速推</el-button>
-       <el-button type="info" round icon="el-icon-star-off" >果然接地气的才是王道。By《傻帽儿图书》</el-button>
-     </div>
-    <div class="content">
-      <el-card shadow="hover" class="ecard" :body-style="{padding: '0px'}">
-        <div class="card">
-          <img src="./image/test.jpg" alt="">
-          <div class="book-title">情书</div>
-          <div class="author">岩井俊二</div>
-          <div class="more">查看详情</div>
+    <!-- main -->
+    <div class="main">
+      <!-- 导航栏 -->
+      <div class="nav">
+        <div class="left">
+          <el-menu mode="horizontal">
+            <el-menu-item index="2-1">HOME</el-menu-item>
+            <el-menu-item index="2-2">ABOUT</el-menu-item>
+            <el-menu-item index="2-3">BONTACTS</el-menu-item>
+            <el-menu-item index="2-4">BLOG</el-menu-item>
+          </el-menu>
+        </div>
+        <div class="search">
+          <i class="el-icon-search" right></i>
+        </div>
       </div>
-      </el-card>
-
-       <el-card shadow="hover" class="ecard" :body-style="{padding: '0px'}">
-        <div class="card">
+      <!-- 广告栏 -->
+      <div class="ad">
+        <div class="ad-book">
           <img src="./image/test.jpg" alt="">
-          <div class="book-title">情书</div>
-          <div class="author">岩井俊二</div>
-          <div class="more">查看详情</div>
-      </div>
-      </el-card>
-
-       <el-card shadow="hover" class="ecard" :body-style="{padding: '0px'}">
-        <div class="card">
-          <img src="./image/test.jpg" alt="">
-          <div class="book-title">情书</div>
-          <div class="author">岩井俊二</div>
-          <div class="more">查看详情</div>
-      </div>
-      </el-card>
-
-       <el-card shadow="hover" class="ecard" :body-style="{padding: '0px'}">
-        <div class="card">
-          <img src="./image/test.jpg" alt="">
-          <div class="book-title">情书</div>
-          <div class="author">岩井俊二</div>
-          <div class="more">查看详情</div>
-      </div>
-      </el-card>
-
-       <el-card shadow="hover" class="ecard" :body-style="{padding: '0px'}">
-        <div class="card">
-          <img src="./image/test.jpg" alt="">
-          <div class="book-title">情书</div>
-          <div class="author">岩井俊二</div>
-          <div class="more">查看详情</div>
-      </div>
-      </el-card>
-
-       <el-card shadow="hover" class="ecard" :body-style="{padding: '0px'}">
-        <div class="card">
-          <img src="./image/test.jpg" alt="">
-          <div class="book-title">情书</div>
-          <div class="author">岩井俊二</div>
-          <div class="more">查看详情</div>
-      </div>
-      </el-card>
-
-       <el-card shadow="hover" class="ecard" :body-style="{padding: '0px'}">
-        <div class="card">
-          <img src="./image/test.jpg" alt="">
-          <div class="book-title">情书</div>
-          <div class="author">岩井俊二</div>
-          <div class="more">查看详情</div>
-      </div>
-      </el-card>
-
-    </div>
-    <!-- 分页器 -->
-    <div class="page">
-        <el-pagination
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        :current-page="currentPage1"
-        :page-sizes="[100, 200, 300, 400]"
-        :page-size="100"
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="400">
-      </el-pagination>
-    </div>
-   </div> 
-  </el-main>
-  </div>
-  <div class="footer">
-      <el-footer>
-        <el-button type="success" >网红图书</el-button>
-        <div class="hot-books">
-          <div class="hot-item">
-            <img src="./image/test1.jpg" alt="">
-            <div class="right">
-              <div class="title">特工训练手册</div>
-              <div class="author">[美] 克林特·埃默森</div>
-              <div class="summary">危机时刻绝处逢生，前海豹队员教你简单易行的方法 (惟乔评论)</div>
+          <div class="decription">
+            <div class="title">情书</div>
+              <div class="author">岩井俊二 </div>
+              <div class="isbn10">ISBN:9787544292870</div>
+              <div class="format"> FORMAT:精装</div>
+              <div class="price">$20.00</div>
+              <div class="read-more">readmore
+              </div>
             </div>
-          </div>
+        </div>
+        <div class="enter">
+          <!-- <el-progress type="circle" :percentage="90" ></el-progress> -->
+          <img src="./image/ enter.jpg" alt="">
+        </div>
+      </div>
+      <!-- 网红图书 -->
+      <div class="hot-books">
+         <el-carousel :interval="5000" arrow="always">
+          <el-carousel-item v-for="(item, index) in slideimgs" :key="index">
+           <img :src="item" alt="">
+          </el-carousel-item>
+        </el-carousel>
+      </div>
 
-          <div class="hot-item">
-            <img src="./image/test1.jpg" alt="">
-            <div class="right">
-              <div class="title">特工训练手册</div>
-              <div class="author">[美] 克林特·埃默森</div>
-              <div class="summary">危机时刻绝处逢生，前海豹队员教你简单易行的方法 (惟乔评论)</div>
-            </div>
+      <!-- 特色书籍 -->
+      <div class="title">
+          Feature Books
+      </div>
+      <div class="feature-books">
+        <div class="feature-book">
+          <figure>
+            <img src="https://img3.doubanio.com/view/ark_article_cover/retina/public/52889083.jpg?v=1528358688.0" alt="An awesome picture">	
+            <figcaption class="feature">the best book</figcaption>
+          </figure>
+          <div class="detail">
+            <span>约翰·赫斯特</span>
+            <p>$29.99</p>
+            <p><el-button type="danger">details</el-button></p>
           </div>
         </div>
-      </el-footer>
-      <el-col>
-        <div class="aboutme">傻帽儿图书</div>
-      </el-col>
+        <div class="feature-book">
+          <figure>
+            <img src="https://img1.doubanio.com/view/ark_article_cover/retina/public/45211019.jpg?v=1516072034.0" alt="An awesome picture">	
+            <figcaption class="feature">the best book</figcaption>
+          </figure>
+          <div class="detail">
+            <span>约翰·赫斯特</span>
+            <p>$29.99</p>
+            <p><el-button type="danger">details</el-button></p>
+          </div>
+        </div>
+        <div class="feature-book">
+          <figure>
+            <img src="https://img1.doubanio.com/view/ark_article_cover/retina/public/53620018.jpg?v=1529975808.0" alt="An awesome picture">	
+            <figcaption class="feature">the best book</figcaption>
+          </figure>
+          <div class="detail">
+            <span>约翰·赫斯特</span>
+            <p>$29.99</p>
+            <p><el-button type="danger">details</el-button></p>
+          </div>
+        </div>
+      </div>
+      <!-- 热榜图书 -->
+      <div class="top-book-title">Top Rated Books</div>
+      <div class="top-books">
+        <div class="top-book">
+          <figure>
+            <img src="https://img3.doubanio.com/view/ark_article_cover/retina/public/37231371.jpg?v=1501843433.0" alt="An awesome picture">	
+            <figcaption class="top">the best book</figcaption>
+          </figure>
+          <div class="detail">
+            <span>约翰·赫斯特</span>
+            <p>$29.99</p>
+            <p><el-button type="danger">details</el-button></p>
+          </div>
+        </div>
+        <div class="top-book">
+          <figure>
+            <img src="https://img3.doubanio.com/view/ark_article_cover/retina/public/53664513.jpg?v=1530006193.0" alt="An awesome picture">	
+            <figcaption class="top">the best book</figcaption>
+          </figure>
+          <div class="detail">
+            <span>约翰·赫斯特</span>
+            <p>$29.99</p>
+            <p><el-button type="danger">details</el-button></p>
+          </div>
+        </div>
+        <div class="top-book">
+          <figure>
+            <img src="https://img3.doubanio.com/view/ark_article_cover/retina/public/33087371.jpg?v=1492416460.0" alt="An awesome picture">	
+            <figcaption class="top">the best book</figcaption>
+          </figure>
+          <div class="detail">
+            <span>约翰·赫斯特</span>
+            <p>$29.99</p>
+            <p><el-button type="danger">details</el-button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="footers">
+        <el-menu mode="horizontal" class="foot">
+          <el-menu-item index="3-1">home</el-menu-item>
+          <el-menu-item index="3-2">about</el-menu-item>
+          <el-menu-item index="3-3">bolg</el-menu-item>
+          <el-menu-item index="3-4">contacts</el-menu-item>
+        </el-menu>
+        <div class="rights"> book king web by summertzz</div>
+    </div>
   </div>
-</el-container>
 </div>
- 
- 
 </template>
 
 <script>
 export default {
   data() {
     return {
-      currentPage1: 1
+      slideimgs: [
+        "https://img1.doubanio.com/view/ark_campaign_pic/large/public/6138.jpg",
+        "https://img1.doubanio.com/view/ark_campaign_pic/large/public/6137.jpg",
+        "https://img3.doubanio.com/view/ark_campaign_pic/large/public/6133.jpg",
+        "https://img3.doubanio.com/view/ark_campaign_pic/large/public/6134.jpg",
+        "https://img1.doubanio.com/view/ark_campaign_pic/large/public/6129.jpg",
+        "https://img1.doubanio.com/view/ark_campaign_pic/large/public/6138.jpg"
+      ]
     };
   },
-  methods: {
-    handleSelect() {},
-    handleSizeChange(val) {
-      console.log(`每页 ${val} 条`);
-    },
-    handleCurrentChange(val) {
-      console.log(`当前页: ${val}`);
-    }
-  },
-
   components: {}
 };
 </script>
 
-<style  lang="scss" scoped>
-.container {
-  width: 1180px;
+<style lang="scss" scoped>
+.box {
+  width: 1905px;
+  height: 2367px;
+  background: url(./image/bg.gif) 0 0 repeat;
 
-  margin: 0 auto;
+  .content {
+    width: 1302px;
+    // height: 2367px;
+    margin: 0 auto;
+    background-color: #fff;
 
-  .nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .headers {
+      display: flex;
+      justify-content: space-between;
+      // width: 0%;
+      height: 116px;
+      background-color: #fff;
+      border-bottom: 3px solid orange;
+      // padding: 30px 30px;
 
-    .login {
-      color: #38f;
+      .logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        figcaption {
+          text-align: center;
+        }
+      }
+      .login {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // padding: 30px 30px;
+        color: rgb(137, 137, 137);
+      }
     }
-  }
 
-  .main {
-    .book-recomend {
-      // .recomend {
-      //   margin-top: 5px;
-      //   margin-bottom: 10px;
-      // }
-      .el-carousel__item h3 {
-        color: #475669;
-        font-size: 18px;
-        opacity: 0.75;
-        line-height: 300px;
-        margin: 0;
+    .main {
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left {
+          padding-left: 30px;
+        }
+        // padding: 30px 30px;
+        .search {
+          width: 370px;
+          margin-right: 30px;
+          // height: 116px;
+          color: #ffdbdb;
+          font-size: 25px;
+          font-weight: bolder;
+          border-bottom: 1px solid #eee;
+        }
       }
 
-      .el-carousel__item:nth-child(2n) {
-        background-color: #99a9bf;
+      //  广告栏
+      .ad {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+        .ad-book {
+          display: flex;
+          // justify-content: space-between;
+          align-items: center;
+
+          width: 768px;
+          height: 460px;
+          margin-left: 30px;
+          border: 1px solid #eee;
+          border-radius: 1px;
+
+          img {
+            display: block;
+            width: 244px;
+            height: 352px;
+            padding: 50px 50px;
+          }
+          .decription {
+            width: 333px;
+            height: 286px;
+            // margin-right: 60px;
+            margin-left: 10px;
+            padding-top: 1px;
+
+            .title {
+              font-size: 60px;
+              margin-left: 5px;
+              font-weight: 500;
+              border: none;
+            }
+            .author {
+              // text-align: center;
+              padding-top: 20px;
+              font-size: 18px;
+              color: #9b9b9b;
+              padding-left: 20px;
+            }
+
+            .isbn10 {
+              font-size: 12px;
+              color: #9b9b9b;
+              padding-left: 20px;
+              padding-top: 10px;
+            }
+
+            .format {
+              font-size: 12px;
+              color: #9b9b9b;
+              padding-left: 20px;
+              padding-top: 5px;
+            }
+
+            .price {
+              font-size: 30px;
+              color: #fe5252;
+              padding-left: 20px;
+              padding-top: 10px;
+              margin-top: 15px;
+            }
+            .read-more {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 15px;
+              color: #fff;
+              text-align: center;
+              border-radius: 3px;
+              background-color: #fe5252;
+              width: 85px;
+              height: 25px;
+              padding: 5px 5px;
+              margin-left: 20px;
+              margin-top: 26px;
+            }
+          }
+        }
+        .enter {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 370px;
+          height: 460px;
+          margin-right: 30px;
+          background-color: #ffdbdb;
+        }
+      }
+      // 网红图书
+      .hot-books {
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 40px;
+        .el-carousel__item h3 {
+          color: #475669;
+          font-size: 14px;
+          opacity: 0.75;
+          line-height: 200px;
+          margin: 0;
+        }
+
+        .el-carousel__item:nth-child(2n) {
+          background-color: #99a9bf;
+        }
+
+        .el-carousel__item:nth-child(2n + 1) {
+          background-color: #d3dce6;
+        }
+        .hot-book-one {
+          img {
+            display: block;
+            // width: 265px;
+            height: 200px;
+            margin-left: 30px;
+          }
+          // background-color: #4ffbe5;
+        }
       }
 
-      .el-carousel__item:nth-child(2n + 1) {
-        background-color: #d3dce6;
-      }
-    }
-
-    .books-cards {
+      // 特色书籍
       .title {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        border-bottom: 1px solid #eee;
+        margin-left: 30px;
+        margin-top: 20px;
 
-        margin-top: 10px;
+        height: 60px;
+        font-size: 20px;
       }
-
-      .content {
+      .feature-books {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-grow: 1;
-        margin-top: 20px;
 
-        .ecard {
-          margin-left: 0px;
-          width: 135px;
-          height: 280px;
+        // margin-left: 30px;
+        margin-right: 30px;
+        // width: 1200px;
 
-          .card {
-            width: 135px;
-            height: 277px;
+        // background-color: #eee;
+        .feature-book {
+          display: flex;
+          // justify-content: space-between;
+          align-items: center;
+          width: 370px;
+          height: 230px;
+          margin-top: 10px;
+          img {
+            display: block;
+            width: 140px;
+            height: 209px;
+          }
 
-            color: #666;
-            font-size: 12px;
+          .feature {
+            margin-top: 10px;
+            color: #fe5252;
+          }
 
-            img {
+          .detail {
+            margin-top: 5px;
+            margin-left: 20px;
+            span {
               display: block;
-              width: 135px;
-              height: 190px;
             }
-            .book-title {
-              margin-top: 8px;
-              padding-left: 5px;
-            }
-
-            .author {
-              margin-top: 8px;
-              padding-left: 5px;
-            }
-
-            .more {
-              display: flex;
-              justify-content: flex-end;
-              align-items: center;
-              margin-top: 10px;
-              padding-right: 10px;
-              color: #7b7d7e;
+            p {
+              color: #fe5252;
+              font-size: 20px;
             }
           }
         }
       }
 
-      .page {
+      // 热榜图书
+      .top-book-title {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        margin-left: 30px;
+        margin-top: 20px;
+
+        height: 60px;
+        font-size: 20px;
+      }
+      .top-books {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        // margin-left: 30px;
+        margin-right: 30px;
+        // width: 1200px;
+
+        // background-color: #eee;
+        .top-book {
+          display: flex;
+          // justify-content: space-between;
+          align-items: center;
+          width: 370px;
+          height: 230px;
+          margin-top: 20px;
+          img {
+            display: block;
+            width: 140px;
+            height: 209px;
+          }
+
+          .top {
+            margin-top: 10px;
+            color: #fe5252;
+          }
+
+          .detail {
+            margin-top: 5px;
+            margin-left: 20px;
+            span {
+              display: block;
+            }
+            p {
+              color: #fe5252;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    // 页脚
+    .footers {
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      margin-top: 20px;
+
+      .foot {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 10px;
-        height: 50px;
-        background-color: #eee;
+        width: 100%;
+        height: 100px;
+        border-top: 1px solid #eee;
       }
-    }
-  }
-
-  .footer {
-    .hot-books {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      // flex-grow: 1;
-      .hot-item {
+      .rights {
         display: flex;
-        // justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        flex-grow: 1;
-        margin-top: 10px;
-        img {
-          width: 90px;
-          height: 140px;
-        }
-        .right {
-          margin-left: 20px;
-          font-size: 14px;
-
-          .title {
-            margin-top: 10px;
-          }
-          .author {
-          }
-          .summary {
-          }
-        }
+        width: 100%;
+        height: 80px;
+        color: #ffdbdb;
       }
-    }
-    .aboutme {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 150px;
-      height: 50px;
-      background-color: #eee;
     }
   }
 }

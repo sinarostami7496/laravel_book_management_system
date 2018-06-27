@@ -72,24 +72,6 @@
 
             <el-col>
               <el-form-item label="作者">
-                <!-- <el-row type="flex" justify="start">
-                  <el-tag
-                    :key="index"
-                    v-for="(item, index) in bookForm.author"
-                    closable
-                    style="margin-right: 10px;"
-                  >
-                    {{ item }}
-                  </el-tag>
-                  <el-input size="small"
-                    @keyup.enter.native="authorInputVisible = false"
-                    @blur="authorInputVisible"
-                    v-if="authorInputVisible"
-                  ></el-input>
-                  <el-button size="small" v-else @click="authorInputVisible = true">
-                    添加作者
-                  </el-button>
-                </el-row> -->
                 <el-tag 
                   :key="tag"
                   v-for="tag in authorNames"
@@ -238,11 +220,6 @@ export default {
         total: 0,
         page: 1
       },
-      // bookData: {
-      //   id: "1230448",
-      //   isbn10: "7508314182",
-      //   isbn13: "9787508314181"
-      // },
       bookData: [],
       bookValue: [],
       input1: "",
@@ -422,10 +399,6 @@ export default {
   },
 
   async created() {
-    //  axios.get('/api/book')
-    //    .then((response) => {
-    //    console.log(response)
-    //    }
     this.getData();
   }
 };
@@ -451,14 +424,9 @@ export default {
 
 .el-col {
   margin-top: 10px;
-  // height: 60px;
   background-clip: content-box;
-  // background-color: #eee;
 
   .eform {
-    // display: flex;
-    // align-items: center;
-
     margin-top: 10px;
 
     .einput {
@@ -473,10 +441,6 @@ export default {
     }
   }
 
-  // .deleteButton {
-  //   background-color: #388ab7;
-  // }
-
   .operation {
     display: flex;
     justify-content: flex-end;
@@ -489,10 +453,6 @@ export default {
     align-items: center;
 
     padding-left: 10px;
-
-    // .el-button {
-    //    background-color: #388ab7;
-    // }
   }
 }
 </style>

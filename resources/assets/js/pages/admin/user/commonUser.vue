@@ -26,6 +26,7 @@
      <el-table-column prop="uid" label="用户编号" sortable width="180"></el-table-column>
      <el-table-column prop="name" label="用户名" sortable width="180"></el-table-column>
      <el-table-column prop="email" label="邮箱"  sortable width="180"></el-table-column>
+     <el-table-column prop="password" label="密码"  sortable width="180"></el-table-column>
      <el-table-column prop="created" label="注册时间"  sortable width="150"> </el-table-column>
      <el-table-column prop="loc_name" label="居住城市名"  sortable width="180"></el-table-column>
      <el-table-column label="操作" class="operation" align="right">
