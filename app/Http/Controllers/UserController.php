@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
@@ -12,9 +13,36 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        //验证请求参数
+        $request->validate([
+            // 验证分页请求参数
+            'page' => 'integer|gte:1',
+            'per_page' => 'integer|gte:1',
+            'sort_by' => 'in:id,uid,name,email,loc_id,loc_name',
+
+            'order' => 'in:desc,asc'
+        ]);
+
+        // 设置默认请求返回数据
+        $page = $request->query('page', 1);
+        $per_page = $request->query('per_page', 10);
+        $sort_by = $request->query('sort_by', 'id');
+        $order = $request->query('order', 'asc');
+
+        $count = User::count();
+
+        $users = User::orderBy($sort_by, $order)
+            ->offset(($page - 1) * $per_page)
+            ->limit($per_page)
+            ->get();
+
+        return [
+            'code' => '200 succfessful',
+            'count' => $count,
+            'users' => $users
+        ];
     }
 
     /**
@@ -27,13 +55,11 @@ class UserController extends Controller
     {
         //验证请求参数
         $request->validate([
-            'id' => 'required|integer|unique:users,id',
-            'uid' => 'required|unique:users|string',
-            'name' => 'required|string',
+            // 'id' => 'required|integer|unique:users',
+            // 'uid' => 'required|unique:users|string',
+            'name' => 'required|string|unique:users',
             'email' => 'required|email',
             'avatar' => 'url',
-            'alt' => 'url' ,
-            'created' => 'required|date',
             // 'loc_id' => 'required|',
             // 'loc_name' => 'required|',
             // 'desc' => 'text',
@@ -42,25 +68,28 @@ class UserController extends Controller
         ]);
         // 存入数据库
         $user = new User;
+
         $form = $request->only([
-             'id',
-             'uid',
-             'name',
-             'email',
-             'avatar',
-             'alt',
-             'created',
-             'loc_id',
-             'loc_name',
-             'desc',
-             'password',
+            // 'id',
+            // 'uid',
+            'name',
+            'email',
+            'avatar',
+            'loc_id',
+            'loc_name',
+            'desc',
+            'password',
         ]);
         
-        foreach($form as $key => $value) {
-            $user ->$key = $value;
+        // 加密密码
+        $form['password'] = bcrypt($form['password']);
+
+        foreach ($form as $key => $value) {
+            $user->$key = $value;
         }
 
         $user->save();
+
         // 返回数据
         return [
             'code' => '200ok'
@@ -73,9 +102,21 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
-        //
+        $request['id'] = $id;
+
+        // 验证 id
+        $request->validate([
+            'id' => 'exists:users,id'
+        ]);
+
+        $user = User::find($id);
+
+        return [
+            'code' => 200,
+            'user' => $user
+        ];
     }
 
     /**
@@ -87,7 +128,41 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $request['id'] = $id;
+
+        //验证请求参数
+        $request->validate([
+            'name' => 'string|unique:users,name,' . $request->name . ',name',
+            'email' => 'email|unique:users,email,' . $request->email . ',email',
+            'desc' => 'string',
+            'avatar' => 'url',
+            'password' => 'regex:/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,8}$/',
+        ]);
+
+        $form = $request->only([
+            'name',
+            'email',
+            'avatar',
+            'desc',
+            'password'
+        ]);
+
+        if ($request->password)
+            $form['password'] = bcrypt($form['password']);
+
+        $user = User::find($id);
+
+        foreach ($form as $key => $value) {
+            $user->$key = $value;
+        }
+
+        $user->save();
+
+        return [
+            'code' => 200,
+            'user' => $user
+        ];
     }
 
     /**
@@ -96,8 +171,20 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $request['id'] = $id;
+
+        $request->validate([
+            'id' => 'exists:users,id'
+        ]);
+
+        $user = User::find($id);
+        $user->delete();
+
+        return [
+            'code' => 200,
+            'user' => $user
+        ];
     }
 }

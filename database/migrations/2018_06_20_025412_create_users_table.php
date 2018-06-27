@@ -15,15 +15,13 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('uid')->unique();
-            $table->string('name')->unqiue();
+            $table->string('name')->unique();
             $table->string('email')->unqiue();
-            $table->string('avatar')->nullable();
-            $table->string('alt')->nullable();
-            $table->dateTime('created');
-            $table->string('loc_id');
-            $table->string('loc_name');
-            $table->text('desc');
+            // TODO: 考虑 base 64 储存问题
+            $table->text('avatar')->nullable();
+            $table->string('loc_id')->nullable();
+            $table->string('loc_name')->nullable();
+            $table->text('desc')->nullable();
             $table->string('password');
             $table->timestamps();
         });

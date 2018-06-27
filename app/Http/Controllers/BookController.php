@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Book;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use Illuminate\Support\Facades\DB;
 
 class BookController extends Controller
 {
@@ -29,36 +28,6 @@ class BookController extends Controller
             'order' => 'in:desc,asc',
 
             'id' => 'exists:books,id',
-            // 
-            'isbn10' => ['string|size:10', Rule::unique('books', 'isbn10')->ignore($request->isbn10, 'isbn10')],
-            'isbn13' => ['digits:13', Rule::unique('books', 'isbn13')->ignore($request->isbn13, 'isbn13')],
-            'title' => '',
-            // 'origin_title' => '',
-            // 'alt_title' => '',
-            // 'subtitle' => '',
-            // 'image' => 'url',
-            // 'images.small' => 'url',
-            // 'images.medium' => 'url',
-            // 'images.large' => 'url',
-
-            // 'author' => 'array',
-            // 'translator' => 'array',
-            // 'publisher' => '',
-            // 'pubdate' => 'date',
-            // // 'rating' => 'json',
-            // // TODO: min <= max
-            // 'rating.max' => 'integer|between:0,10',
-            // 'rating.min' => 'integer|between:0,10|lte:rating.max',
-            // 'rating.numRaters' => 'integer',
-            // 'rating.average' => 'numeric',
-
-            // 'tags.*.count' => 'integer',
-            // 'tags.*.name' => '',
-            // 'binding' => '',
-            // // 'price' => 'regex:/^[0-9]+(.[0-9]{1,2})?$/',
-            // 'price' => 'string',
-            // 'pages' => 'integer',
-            // 'is_store' => 'boolean'
         ]);
 
         // 设置默认请求返回数据
@@ -67,17 +36,10 @@ class BookController extends Controller
         $sort_by = $request->query('sort_by', 'id');
         $order = $request->query('order', 'asc');
 
-        // 设置图书默认请求
-        $id = $request->query('id', '1230448');
-        $isbn10 = $request->query('isbn10', '7508314182');
-        $isbn13 = $request->query('isbn13', '9787508314181');
-
-
-        $count = DB::table('books')->count();
+        $count = Book::count();
 
         // 分页器
-        $books = DB::table('books')
-            ->orderBy($sort_by, $order)
+        $books = Book::orderBy($sort_by, $order)
             ->offset(($page - 1) * $per_page)
             ->limit($per_page)
             ->get();
@@ -90,6 +52,7 @@ class BookController extends Controller
             $book->rating = json_decode($book->rating);
             $book->tags = json_decode($book->tags);
         }
+
         return [
             'code' => '200 succfessful',
             'count' => $count,
@@ -201,7 +164,6 @@ class BookController extends Controller
      */
     public function show(Request $request, $id)
     {
-        // id 替换 book
         $request['id'] = $id;
 
         // 验证 id
@@ -243,9 +205,6 @@ class BookController extends Controller
         //
         $request['id'] = $id;
         $request->validate([
-
-            'id' => 'exists:books,id',
-            // 
             'isbn10' => ['string|size:10', Rule::unique('books', 'isbn10')->ignore($request->isbn10, 'isbn10')],
             'isbn13' => ['digits:13', Rule::unique('books', 'isbn13')->ignore($request->isbn13, 'isbn13')],
             'title' => '',
@@ -279,7 +238,6 @@ class BookController extends Controller
 
         // 
         $modi_fields = $request->only([
-            'id',       // 线上环境移除 id
             'isbn10',
             'isbn13',
             'title',

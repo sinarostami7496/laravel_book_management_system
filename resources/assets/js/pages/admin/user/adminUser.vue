@@ -54,6 +54,8 @@
 </template>
 
 <script>
+import userMockData from "@/data/user";
+
 export default {
   data() {
     return {
@@ -65,7 +67,10 @@ export default {
     // 分页器
     handleSizeChange() {},
     handleCurrentChange() {},
-    handleMassDelete() {}
+    handleMassDelete() {},
+    insertMockData() {
+      console.log(userMockData);
+    }
   }
 };
 </script>
