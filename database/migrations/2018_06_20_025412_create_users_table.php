@@ -15,7 +15,8 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();
+            $table->string('uid')->unique();
+            $table->string('name');
             $table->string('email')->unqiue();
             // TODO: 考虑 base 64 储存问题
             $table->text('avatar')->nullable();

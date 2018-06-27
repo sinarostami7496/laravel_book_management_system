@@ -56,8 +56,8 @@ class UserController extends Controller
         //验证请求参数
         $request->validate([
             // 'id' => 'required|integer|unique:users',
-            // 'uid' => 'required|unique:users|string',
-            'name' => 'required|string|unique:users',
+            'uid' => 'required|string|unique:users',
+            'name' => 'string',
             'email' => 'required|email',
             'avatar' => 'url',
             // 'loc_id' => 'required|',
@@ -71,7 +71,7 @@ class UserController extends Controller
 
         $form = $request->only([
             // 'id',
-            // 'uid',
+            'uid',
             'name',
             'email',
             'avatar',
@@ -80,7 +80,9 @@ class UserController extends Controller
             'desc',
             'password',
         ]);
-        
+
+        if (!$request->name) $form['name'] = $request->uid;
+
         // 加密密码
         $form['password'] = bcrypt($form['password']);
 
@@ -133,6 +135,8 @@ class UserController extends Controller
 
         //验证请求参数
         $request->validate([
+            'id' => 'exists:users,id',
+            'uid' => 'string|unique:users,uid,' . $request->uid . ',uid',
             'name' => 'string|unique:users,name,' . $request->name . ',name',
             'email' => 'email|unique:users,email,' . $request->email . ',email',
             'desc' => 'string',
@@ -141,6 +145,7 @@ class UserController extends Controller
         ]);
 
         $form = $request->only([
+            'uid',
             'name',
             'email',
             'avatar',

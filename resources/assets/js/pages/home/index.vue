@@ -54,9 +54,9 @@
       </div>
       <!-- 网红图书 -->
       <div class="hot-books">
-         <el-carousel :interval="5000" arrow="always">
+         <el-carousel :interval="5000" arrow="always" height="300px">
           <el-carousel-item v-for="(item, index) in slideimgs" :key="index">
-           <img :src="item" alt="">
+            <img class="image" :src="item" alt="">
           </el-carousel-item>
         </el-carousel>
       </div>
@@ -329,6 +329,14 @@ export default {
         margin-left: 30px;
         margin-right: 30px;
         margin-top: 40px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center;
+        }
+
         .el-carousel__item h3 {
           color: #475669;
           font-size: 14px;

@@ -205,6 +205,7 @@ class BookController extends Controller
         //
         $request['id'] = $id;
         $request->validate([
+            'id' => 'exists:books,id',
             'isbn10' => ['string|size:10', Rule::unique('books', 'isbn10')->ignore($request->isbn10, 'isbn10')],
             'isbn13' => ['digits:13', Rule::unique('books', 'isbn13')->ignore($request->isbn13, 'isbn13')],
             'title' => '',
