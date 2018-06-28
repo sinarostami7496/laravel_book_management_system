@@ -5,7 +5,7 @@
         <img src="" alt="">
       </div>
       <div class="content">
-        <div class="title">注册傻帽儿图书</div>
+        <div class="title"> Register Summer Account</div>
         <div class="form">
           <div class="username">
             <input type="text" placeholder="用户名/邮箱注册">
@@ -60,7 +60,7 @@ export default {
         height: 70px;
         border-radius: 35px;
         margin-top: 40px;
-        background-color: #ce329f;
+        background-color: #00ced1;
       }
     }
 
@@ -76,7 +76,7 @@ export default {
         align-items: center;
 
         font-size: 20px;
-        color: #ce329f;
+        color: #00ced1;
       }
 
       .form {
@@ -122,7 +122,7 @@ export default {
           margin-top: 20px;
           height: 30px;
           border-radius: 3px;
-          background-color: #ce329f;
+          background-color: #00ced1;
           color: #fff;
         }
 
@@ -135,7 +135,7 @@ export default {
           span {
             display: block;
             margin-left: 20px;
-            color: #ce329f;
+            color: #00ced1s;
           }
         }
       }

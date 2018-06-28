@@ -270,9 +270,6 @@ class BookController extends Controller
         // $book->title = 'lsbbd';
 
         $book->save();
-        // Book::where('is_store', 1)->where('title', '小王子')
-        // ->update(['title' => 'lsb']);
-
         return [
             'code' => '200 update ok',
             // 'book' => $book

@@ -21544,7 +21544,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -21695,7 +21694,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.container[data-v-f7036f8a] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  width: 100vw;\n  height: 100vh;\n  background-color: #222;\n}\n.container .main[data-v-f7036f8a] {\n    width: 360px;\n    height: 526px;\n    border-radius: 8px;\n    background-color: #fff;\n}\n.container .main .logo[data-v-f7036f8a] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .main .logo img[data-v-f7036f8a] {\n        width: 70px;\n        height: 70px;\n        border-radius: 35px;\n        margin-top: 40px;\n        background-color: #ce329f;\n}\n.container .main .content[data-v-f7036f8a] {\n      margin: 17px 17px;\n      width: 320px;\n      height: 262px;\n}\n.container .main .content .title[data-v-f7036f8a] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        font-size: 20px;\n        color: #ce329f;\n}\n.container .main .content .form[data-v-f7036f8a] {\n        width: 100%;\n        margin-top: 26px;\n}\n.container .main .content .form .username[data-v-f7036f8a] {\n          width: 100%;\n}\n.container .main .content .form .username input[data-v-f7036f8a] {\n            display: -webkit-box;\n            display: -ms-flexbox;\n            display: flex;\n            -webkit-box-pack: center;\n                -ms-flex-pack: center;\n                    justify-content: center;\n            -webkit-box-align: center;\n                -ms-flex-align: center;\n                    align-items: center;\n            padding: 9px 20px 9px;\n            width: 280px;\n            height: 30px;\n            outline: 0;\n            border: 0;\n            background-color: #eee;\n}\n.container .main .content .form .pwd[data-v-f7036f8a] {\n          width: 100%;\n          margin-top: 10px;\n}\n.container .main .content .form .pwd input[data-v-f7036f8a] {\n            display: -webkit-box;\n            display: -ms-flexbox;\n            display: flex;\n            -webkit-box-pack: center;\n                -ms-flex-pack: center;\n                    justify-content: center;\n            -webkit-box-align: center;\n                -ms-flex-align: center;\n                    align-items: center;\n            padding: 9px 20px 9px;\n            width: 280px;\n            height: 30px;\n            outline: 0;\n            border: 0;\n            background-color: #eee;\n}\n.container .main .content .form .login[data-v-f7036f8a] {\n          display: -webkit-box;\n          display: -ms-flexbox;\n          display: flex;\n          -webkit-box-pack: center;\n              -ms-flex-pack: center;\n                  justify-content: center;\n          -webkit-box-align: center;\n              -ms-flex-align: center;\n                  align-items: center;\n          padding: 9px 20px 9px;\n          margin-top: 20px;\n          height: 30px;\n          border-radius: 3px;\n          background-color: #ce329f;\n          color: #fff;\n}\n.container .main .content .form .hasAccount[data-v-f7036f8a] {\n          display: -webkit-box;\n          display: -ms-flexbox;\n          display: flex;\n          -webkit-box-pack: center;\n              -ms-flex-pack: center;\n                  justify-content: center;\n          -webkit-box-align: center;\n              -ms-flex-align: center;\n                  align-items: center;\n          margin-top: 35px;\n          height: 20px;\n}\n.container .main .content .form .hasAccount span[data-v-f7036f8a] {\n            display: block;\n            margin-left: 20px;\n            color: #ce329f;\n}\n", ""]);
+exports.push([module.i, "\n.container[data-v-f7036f8a] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  width: 100vw;\n  height: 100vh;\n  background-color: #222;\n}\n.container .main[data-v-f7036f8a] {\n    width: 360px;\n    height: 526px;\n    border-radius: 8px;\n    background-color: #fff;\n}\n.container .main .logo[data-v-f7036f8a] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .main .logo img[data-v-f7036f8a] {\n        width: 70px;\n        height: 70px;\n        border-radius: 35px;\n        margin-top: 40px;\n        background-color: #00ced1;\n}\n.container .main .content[data-v-f7036f8a] {\n      margin: 17px 17px;\n      width: 320px;\n      height: 262px;\n}\n.container .main .content .title[data-v-f7036f8a] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        font-size: 20px;\n        color: #00ced1;\n}\n.container .main .content .form[data-v-f7036f8a] {\n        width: 100%;\n        margin-top: 26px;\n}\n.container .main .content .form .username[data-v-f7036f8a] {\n          width: 100%;\n}\n.container .main .content .form .username input[data-v-f7036f8a] {\n            display: -webkit-box;\n            display: -ms-flexbox;\n            display: flex;\n            -webkit-box-pack: center;\n                -ms-flex-pack: center;\n                    justify-content: center;\n            -webkit-box-align: center;\n                -ms-flex-align: center;\n                    align-items: center;\n            padding: 9px 20px 9px;\n            width: 280px;\n            height: 30px;\n            outline: 0;\n            border: 0;\n            background-color: #eee;\n}\n.container .main .content .form .pwd[data-v-f7036f8a] {\n          width: 100%;\n          margin-top: 10px;\n}\n.container .main .content .form .pwd input[data-v-f7036f8a] {\n            display: -webkit-box;\n            display: -ms-flexbox;\n            display: flex;\n            -webkit-box-pack: center;\n                -ms-flex-pack: center;\n                    justify-content: center;\n            -webkit-box-align: center;\n                -ms-flex-align: center;\n                    align-items: center;\n            padding: 9px 20px 9px;\n            width: 280px;\n            height: 30px;\n            outline: 0;\n            border: 0;\n            background-color: #eee;\n}\n.container .main .content .form .login[data-v-f7036f8a] {\n          display: -webkit-box;\n          display: -ms-flexbox;\n          display: flex;\n          -webkit-box-pack: center;\n              -ms-flex-pack: center;\n                  justify-content: center;\n          -webkit-box-align: center;\n              -ms-flex-align: center;\n                  align-items: center;\n          padding: 9px 20px 9px;\n          margin-top: 20px;\n          height: 30px;\n          border-radius: 3px;\n          background-color: #00ced1;\n          color: #fff;\n}\n.container .main .content .form .hasAccount[data-v-f7036f8a] {\n          display: -webkit-box;\n          display: -ms-flexbox;\n          display: flex;\n          -webkit-box-pack: center;\n              -ms-flex-pack: center;\n                  justify-content: center;\n          -webkit-box-align: center;\n              -ms-flex-align: center;\n                  align-items: center;\n          margin-top: 35px;\n          height: 20px;\n}\n.container .main .content .form .hasAccount span[data-v-f7036f8a] {\n            display: block;\n            margin-left: 20px;\n            color: #00ced1s;\n}\n", ""]);
 
 // exports
 
@@ -21763,7 +21762,9 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "content" }, [
-          _c("div", { staticClass: "title" }, [_vm._v("注册傻帽儿图书")]),
+          _c("div", { staticClass: "title" }, [
+            _vm._v(" Register Summer Account")
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "form" }, [
             _c("div", { staticClass: "username" }, [
@@ -22901,6 +22902,16 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -23068,7 +23079,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                 _context2.t0 = _context2["catch"](7);
 
                 console.error.response;
-                this.$message("" + _context2.t0.response.status);
+                this.$message("\u51FA\u9519\u5566" + _context2.t0.response.status);
 
               case 16:
                 _iteratorNormalCompletion = true;
@@ -31255,9 +31266,46 @@ var render = function() {
                                 "el-form-item",
                                 { attrs: { label: "图书封面" } },
                                 [
-                                  _c("el-input", {
-                                    attrs: { placeholder: "", type: "textarea" }
-                                  })
+                                  _c(
+                                    "el-upload",
+                                    {
+                                      staticClass: "upload-demo",
+                                      attrs: {
+                                        drag: "",
+                                        action:
+                                          "https://jsonplaceholder.typicode.com/posts/",
+                                        multiple: ""
+                                      }
+                                    },
+                                    [
+                                      _c("i", {
+                                        staticClass: "el-icon-upload"
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "el-upload__text" },
+                                        [
+                                          _vm._v("将文件拖到此处，或"),
+                                          _c("em", [_vm._v("点击上传")])
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass: "el-upload__tip",
+                                          attrs: { slot: "tip" },
+                                          slot: "tip"
+                                        },
+                                        [
+                                          _vm._v(
+                                            "只能上传jpg/png文件，且不超过500kb"
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
                                 ],
                                 1
                               )
@@ -31622,7 +31670,7 @@ var render = function() {
             staticStyle: { float: "right" },
             attrs: {
               "current-page": _vm.pagination.page,
-              "page-sizes": [10, 15, 20, 30],
+              "page-sizes": [5, 10, 20, 30],
               "page-size": _vm.pagination.per_page,
               total: _vm.pagination.total,
               layout: "total, sizes, prev, pager, next, jumper"
