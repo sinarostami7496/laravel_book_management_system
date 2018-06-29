@@ -108,7 +108,7 @@
         @size-change="e => { per_page = e; getData() }"
         @current-change="e => { page = e; getData() }"
         :current-page="page"
-        :page-sizes="[15, 20, 30, 50]"
+        :page-sizes="[10, 15, 30, 50]"
         :page-size="per_page"
         layout="total, sizes, prev, pager, next, jumper"
         :total="total">

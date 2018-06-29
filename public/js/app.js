@@ -21506,7 +21506,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.container[data-v-6fe7f1c5] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  width: 100vw;\n  height: 100vh;\n  background-color: #222;\n}\n.container .main[data-v-6fe7f1c5] {\n    width: 360px;\n    height: 526px;\n    border-radius: 8px;\n    background-color: #fff;\n}\n.container .main .logo[data-v-6fe7f1c5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .main .logo img[data-v-6fe7f1c5] {\n        width: 70px;\n        height: 70px;\n        border-radius: 35px;\n        margin-top: 40px;\n        background-color: #ce329f;\n}\n.container .main .content[data-v-6fe7f1c5] {\n      margin: 17px 17px;\n      width: 320px;\n      height: 262px;\n}\n.container .main .content .title[data-v-6fe7f1c5] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        font-size: 20px;\n        color: #ce329f;\n}\n.container .main .content .form[data-v-6fe7f1c5] {\n        width: 100%;\n        margin-top: 26px;\n}\n.container .main .content .form .username[data-v-6fe7f1c5] {\n          width: 100%;\n}\n.container .main .content .form .username input[data-v-6fe7f1c5] {\n            display: -webkit-box;\n            display: -ms-flexbox;\n            display: flex;\n            -webkit-box-pack: center;\n                -ms-flex-pack: center;\n                    justify-content: center;\n            -webkit-box-align: center;\n                -ms-flex-align: center;\n                    align-items: center;\n            padding: 9px 20px 9px;\n            width: 280px;\n            height: 30px;\n            outline: 0;\n            border: 0;\n            background-color: #eee;\n}\n.container .main .content .form .pwd[data-v-6fe7f1c5] {\n          width: 100%;\n          margin-top: 10px;\n}\n.container .main .content .form .pwd input[data-v-6fe7f1c5] {\n            display: -webkit-box;\n            display: -ms-flexbox;\n            display: flex;\n            -webkit-box-pack: center;\n                -ms-flex-pack: center;\n                    justify-content: center;\n            -webkit-box-align: center;\n                -ms-flex-align: center;\n                    align-items: center;\n            padding: 9px 20px 9px;\n            width: 280px;\n            height: 30px;\n            outline: 0;\n            border: 0;\n            background-color: #eee;\n}\n.container .main .content .form .login[data-v-6fe7f1c5] {\n          display: -webkit-box;\n          display: -ms-flexbox;\n          display: flex;\n          -webkit-box-pack: center;\n              -ms-flex-pack: center;\n                  justify-content: center;\n          -webkit-box-align: center;\n              -ms-flex-align: center;\n                  align-items: center;\n          padding: 9px 20px 9px;\n          margin-top: 20px;\n          height: 30px;\n          border-radius: 3px;\n          background-color: #ce329f;\n          color: #fff;\n}\n.container .main .content .form .forget[data-v-6fe7f1c5] {\n          display: -webkit-box;\n          display: -ms-flexbox;\n          display: flex;\n          -webkit-box-pack: justify;\n              -ms-flex-pack: justify;\n                  justify-content: space-between;\n          -webkit-box-align: center;\n              -ms-flex-align: center;\n                  align-items: center;\n          /* // padding: 9px 20px 9px; */\n          margin-top: 25px;\n          height: 20px;\n          color: #ce329f;\n}\n", ""]);
+exports.push([module.i, "\n.box[data-v-6fe7f1c5] {\n  width: 100vw;\n  height: 100vh;\n  padding-top: 180px;\n  background-color: #f0f0f0;\n}\n.box .containers[data-v-6fe7f1c5] {\n    margin: 0 auto;\n    width: 500px;\n    height: 470px;\n    background-color: #fff;\n    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);\n            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);\n    border-radius: 3px;\n}\n.box .containers .headers[data-v-6fe7f1c5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      height: 60px;\n      color: #b4b4b4;\n      font-size: 20px;\n      background-color: #f4f4f4;\n}\n.box .containers .forms[data-v-6fe7f1c5] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      width: 300px;\n}\n.box .containers .forms .username[data-v-6fe7f1c5] {\n        width: 430px;\n        height: 65px;\n        background-color: #f0f0f0;\n        margin: 30px 30px;\n        border: none;\n}\n.box .containers .forms .pwd[data-v-6fe7f1c5] {\n        width: 430px;\n        height: 65px;\n        background-color: #f0f0f0;\n        margin: 15px 30px;\n        border: none;\n}\n.box .containers .forms .login[data-v-6fe7f1c5] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        margin: 30px 30px;\n        width: 430px;\n        height: 65px;\n        background-color: #2196f3;\n        color: #fff;\n}\n", ""]);
 
 // exports
 
@@ -21517,16 +21517,6 @@ exports.push([module.i, "\n.container[data-v-6fe7f1c5] {\n  display: -webkit-box
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -21559,46 +21549,34 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "main" }, [
-        _c("div", { staticClass: "logo" }, [
-          _c("img", { attrs: { src: "", alt: "" } })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "content" }, [
-          _c("div", { staticClass: "title" }, [_vm._v("登录傻帽儿图书")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form" }, [
-            _c("div", { staticClass: "username" }, [
-              _c("input", {
-                attrs: { type: "text", placeholder: "用户名/邮箱" }
-              })
-            ]),
+  return _c("div", { staticClass: "box" }, [
+    _c("div", { staticClass: "containers" }, [
+      _c("div", { staticClass: "headers" }, [_vm._v("\n      Login\n    ")]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "forms" },
+        [
+          _c("el-form", [
+            _c("input", {
+              staticClass: "username",
+              attrs: { placeholder: "用户名" }
+            }),
             _vm._v(" "),
-            _c("div", { staticClass: "pwd" }, [
-              _c("input", { attrs: { type: "text", placeholder: "密码" } })
-            ]),
+            _c("input", {
+              staticClass: "pwd",
+              attrs: { placeholder: " 密码" }
+            }),
             _vm._v(" "),
-            _c("div", { staticClass: "login" }, [_vm._v("登录")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "forget" }, [
-              _c("span", [_vm._v("忘记密码?")]),
-              _vm._v(" "),
-              _c("span", [_vm._v("注册账户")])
-            ])
+            _c("div", { staticClass: "login" }, [_vm._v("登录")])
           ])
-        ])
-      ])
+        ],
+        1
+      )
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -21694,7 +21672,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.container[data-v-f7036f8a] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  width: 100vw;\n  height: 100vh;\n  background-color: #222;\n}\n.container .main[data-v-f7036f8a] {\n    width: 360px;\n    height: 526px;\n    border-radius: 8px;\n    background-color: #fff;\n}\n.container .main .logo[data-v-f7036f8a] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .main .logo img[data-v-f7036f8a] {\n        width: 70px;\n        height: 70px;\n        border-radius: 35px;\n        margin-top: 40px;\n        background-color: #00ced1;\n}\n.container .main .content[data-v-f7036f8a] {\n      margin: 17px 17px;\n      width: 320px;\n      height: 262px;\n}\n.container .main .content .title[data-v-f7036f8a] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        font-size: 20px;\n        color: #00ced1;\n}\n.container .main .content .form[data-v-f7036f8a] {\n        width: 100%;\n        margin-top: 26px;\n}\n.container .main .content .form .username[data-v-f7036f8a] {\n          width: 100%;\n}\n.container .main .content .form .username input[data-v-f7036f8a] {\n            display: -webkit-box;\n            display: -ms-flexbox;\n            display: flex;\n            -webkit-box-pack: center;\n                -ms-flex-pack: center;\n                    justify-content: center;\n            -webkit-box-align: center;\n                -ms-flex-align: center;\n                    align-items: center;\n            padding: 9px 20px 9px;\n            width: 280px;\n            height: 30px;\n            outline: 0;\n            border: 0;\n            background-color: #eee;\n}\n.container .main .content .form .pwd[data-v-f7036f8a] {\n          width: 100%;\n          margin-top: 10px;\n}\n.container .main .content .form .pwd input[data-v-f7036f8a] {\n            display: -webkit-box;\n            display: -ms-flexbox;\n            display: flex;\n            -webkit-box-pack: center;\n                -ms-flex-pack: center;\n                    justify-content: center;\n            -webkit-box-align: center;\n                -ms-flex-align: center;\n                    align-items: center;\n            padding: 9px 20px 9px;\n            width: 280px;\n            height: 30px;\n            outline: 0;\n            border: 0;\n            background-color: #eee;\n}\n.container .main .content .form .login[data-v-f7036f8a] {\n          display: -webkit-box;\n          display: -ms-flexbox;\n          display: flex;\n          -webkit-box-pack: center;\n              -ms-flex-pack: center;\n                  justify-content: center;\n          -webkit-box-align: center;\n              -ms-flex-align: center;\n                  align-items: center;\n          padding: 9px 20px 9px;\n          margin-top: 20px;\n          height: 30px;\n          border-radius: 3px;\n          background-color: #00ced1;\n          color: #fff;\n}\n.container .main .content .form .hasAccount[data-v-f7036f8a] {\n          display: -webkit-box;\n          display: -ms-flexbox;\n          display: flex;\n          -webkit-box-pack: center;\n              -ms-flex-pack: center;\n                  justify-content: center;\n          -webkit-box-align: center;\n              -ms-flex-align: center;\n                  align-items: center;\n          margin-top: 35px;\n          height: 20px;\n}\n.container .main .content .form .hasAccount span[data-v-f7036f8a] {\n            display: block;\n            margin-left: 20px;\n            color: #00ced1s;\n}\n", ""]);
+exports.push([module.i, "\n.box[data-v-f7036f8a] {\n  width: 100vw;\n  height: 100vh;\n  padding-top: 180px;\n  background-color: #f0f0f0;\n}\n.box .containers[data-v-f7036f8a] {\n    margin: 0 auto;\n    width: 500px;\n    height: 470px;\n    background-color: #fff;\n    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);\n            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);\n    border-radius: 3px;\n}\n.box .containers .headers[data-v-f7036f8a] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      height: 60px;\n      color: #b4b4b4;\n      font-size: 20px;\n      background-color: #f4f4f4;\n}\n.box .containers .forms[data-v-f7036f8a] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      width: 300px;\n}\n.box .containers .forms .username[data-v-f7036f8a] {\n        width: 430px;\n        height: 65px;\n        background-color: #f0f0f0;\n        margin: 30px 30px;\n        border: none;\n}\n.box .containers .forms .pwd[data-v-f7036f8a] {\n        width: 430px;\n        height: 65px;\n        background-color: #f0f0f0;\n        margin: 15px 30px;\n        border: none;\n}\n.box .containers .forms .login[data-v-f7036f8a] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        margin: 30px 30px;\n        width: 430px;\n        height: 65px;\n        background-color: #2196f3;\n        color: #fff;\n}\n", ""]);
 
 // exports
 
@@ -21705,17 +21683,6 @@ exports.push([module.i, "\n.container[data-v-f7036f8a] {\n  display: -webkit-box
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -21748,47 +21715,34 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "main" }, [
-        _c("div", { staticClass: "logo" }, [
-          _c("img", { attrs: { src: "", alt: "" } })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "content" }, [
-          _c("div", { staticClass: "title" }, [
-            _vm._v(" Register Summer Account")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form" }, [
-            _c("div", { staticClass: "username" }, [
-              _c("input", {
-                attrs: { type: "text", placeholder: "用户名/邮箱注册" }
-              })
-            ]),
+  return _c("div", { staticClass: "box" }, [
+    _c("div", { staticClass: "containers" }, [
+      _c("div", { staticClass: "headers" }, [_vm._v("\n      Register\n    ")]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "forms" },
+        [
+          _c("el-form", [
+            _c("input", {
+              staticClass: "username",
+              attrs: { placeholder: "用户名" }
+            }),
             _vm._v(" "),
-            _c("div", { staticClass: "pwd" }, [
-              _c("input", { attrs: { type: "text", placeholder: "密码" } })
-            ]),
+            _c("input", {
+              staticClass: "pwd",
+              attrs: { placeholder: " 密码" }
+            }),
             _vm._v(" "),
-            _c("div", { staticClass: "login" }, [_vm._v("注册")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "hasAccount" }, [
-              _vm._v("\n          已有账号? "),
-              _c("span", [_vm._v("登录")])
-            ])
+            _c("div", { staticClass: "login" }, [_vm._v("注册")])
           ])
-        ])
-      ])
+        ],
+        1
+      )
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -22490,7 +22444,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.container[data-v-774b1dff] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  width: 100vw;\n  height: 100vh;\n  background-color: #222;\n}\n.container .main[data-v-774b1dff] {\n    width: 360px;\n    height: 526px;\n    border-radius: 8px;\n    background-color: #fff;\n}\n.container .main .logo[data-v-774b1dff] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n}\n.container .main .logo img[data-v-774b1dff] {\n        width: 70px;\n        height: 70px;\n        border-radius: 35px;\n        margin-top: 40px;\n        background-color: #ce329f;\n}\n.container .main .content[data-v-774b1dff] {\n      margin: 17px 17px;\n      width: 320px;\n      height: 262px;\n}\n.container .main .content .title[data-v-774b1dff] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        font-size: 20px;\n        color: #ce329f;\n}\n.container .main .content .form[data-v-774b1dff] {\n        width: 100%;\n        margin-top: 26px;\n}\n.container .main .content .form .username[data-v-774b1dff] {\n          width: 100%;\n}\n.container .main .content .form .username input[data-v-774b1dff] {\n            display: -webkit-box;\n            display: -ms-flexbox;\n            display: flex;\n            -webkit-box-pack: center;\n                -ms-flex-pack: center;\n                    justify-content: center;\n            -webkit-box-align: center;\n                -ms-flex-align: center;\n                    align-items: center;\n            padding: 9px 20px 9px;\n            width: 280px;\n            height: 30px;\n            outline: 0;\n            border: 0;\n            background-color: #eee;\n}\n.container .main .content .form .pwd[data-v-774b1dff] {\n          width: 100%;\n          margin-top: 10px;\n}\n.container .main .content .form .pwd input[data-v-774b1dff] {\n            display: -webkit-box;\n            display: -ms-flexbox;\n            display: flex;\n            -webkit-box-pack: center;\n                -ms-flex-pack: center;\n                    justify-content: center;\n            -webkit-box-align: center;\n                -ms-flex-align: center;\n                    align-items: center;\n            padding: 9px 20px 9px;\n            width: 280px;\n            height: 30px;\n            outline: 0;\n            border: 0;\n            background-color: #eee;\n}\n.container .main .content .form .login[data-v-774b1dff] {\n          display: -webkit-box;\n          display: -ms-flexbox;\n          display: flex;\n          -webkit-box-pack: center;\n              -ms-flex-pack: center;\n                  justify-content: center;\n          -webkit-box-align: center;\n              -ms-flex-align: center;\n                  align-items: center;\n          padding: 9px 20px 9px;\n          margin-top: 20px;\n          height: 30px;\n          border-radius: 3px;\n          background-color: #ce329f;\n          color: #fff;\n}\n.container .main .content .form .forget[data-v-774b1dff] {\n          display: -webkit-box;\n          display: -ms-flexbox;\n          display: flex;\n          -webkit-box-pack: justify;\n              -ms-flex-pack: justify;\n                  justify-content: space-between;\n          -webkit-box-align: center;\n              -ms-flex-align: center;\n                  align-items: center;\n          /* // padding: 9px 20px 9px; */\n          margin-top: 25px;\n          height: 20px;\n          color: #ce329f;\n}\n", ""]);
+exports.push([module.i, "\n.box[data-v-774b1dff] {\n  width: 100vw;\n  height: 100vh;\n  padding-top: 180px;\n  background-color: #f0f0f0;\n}\n.box .containers[data-v-774b1dff] {\n    margin: 0 auto;\n    width: 500px;\n    height: 470px;\n    background-color: #fff;\n    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);\n            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);\n    border-radius: 3px;\n}\n.box .containers .headers[data-v-774b1dff] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-pack: center;\n          -ms-flex-pack: center;\n              justify-content: center;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      height: 60px;\n      color: #b4b4b4;\n      font-size: 20px;\n      background-color: #f4f4f4;\n}\n.box .containers .forms[data-v-774b1dff] {\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: center;\n          -ms-flex-align: center;\n              align-items: center;\n      width: 300px;\n}\n.box .containers .forms .username[data-v-774b1dff] {\n        width: 430px;\n        height: 65px;\n        background-color: #f0f0f0;\n        margin: 30px 30px;\n        border: none;\n}\n.box .containers .forms .pwd[data-v-774b1dff] {\n        width: 430px;\n        height: 65px;\n        background-color: #f0f0f0;\n        margin: 15px 30px;\n        border: none;\n}\n.box .containers .forms .login[data-v-774b1dff] {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n            -ms-flex-pack: center;\n                justify-content: center;\n        -webkit-box-align: center;\n            -ms-flex-align: center;\n                align-items: center;\n        margin: 30px 30px;\n        width: 430px;\n        height: 65px;\n        background-color: #2196f3;\n        color: #fff;\n}\n", ""]);
 
 // exports
 
@@ -22501,17 +22455,6 @@ exports.push([module.i, "\n.container[data-v-774b1dff] {\n  display: -webkit-box
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -22544,46 +22487,34 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "main" }, [
-        _c("div", { staticClass: "logo" }, [
-          _c("img", { attrs: { src: "", alt: "" } })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "content" }, [
-          _c("div", { staticClass: "title" }, [_vm._v("登录傻帽儿图书")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form" }, [
-            _c("div", { staticClass: "username" }, [
-              _c("input", {
-                attrs: { type: "text", placeholder: "用户名/邮箱" }
-              })
-            ]),
+  return _c("div", { staticClass: "box" }, [
+    _c("div", { staticClass: "containers" }, [
+      _c("div", { staticClass: "headers" }, [_vm._v("\n      Login\n    ")]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "forms" },
+        [
+          _c("el-form", [
+            _c("input", {
+              staticClass: "username",
+              attrs: { placeholder: "用户名" }
+            }),
             _vm._v(" "),
-            _c("div", { staticClass: "pwd" }, [
-              _c("input", { attrs: { type: "text", placeholder: "密码" } })
-            ]),
+            _c("input", {
+              staticClass: "pwd",
+              attrs: { placeholder: " 密码" }
+            }),
             _vm._v(" "),
-            _c("div", { staticClass: "login" }, [_vm._v("登录")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "forget" }, [
-              _c("span", [_vm._v("忘记密码?")]),
-              _vm._v(" "),
-              _c("span", [_vm._v("注册账户")])
-            ])
+            _c("div", { staticClass: "login" }, [_vm._v("登录")])
           ])
-        ])
-      ])
+        ],
+        1
+      )
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -41729,7 +41660,7 @@ var render = function() {
           _c("el-pagination", {
             attrs: {
               "current-page": _vm.page,
-              "page-sizes": [15, 20, 30, 50],
+              "page-sizes": [10, 15, 30, 50],
               "page-size": _vm.per_page,
               layout: "total, sizes, prev, pager, next, jumper",
               total: _vm.total

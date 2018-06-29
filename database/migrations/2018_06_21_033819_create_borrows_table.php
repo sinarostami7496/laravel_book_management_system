@@ -14,13 +14,15 @@ class CreateBorrowsTable extends Migration
     public function up()
     {
         Schema::create('borrows', function (Blueprint $table) {
+            $table->increments('id');
             $table->unsignedInteger('book_id');
             $table->unsignedInteger('user_id');
-            $table->string('borrow_time');
-            $table->string('expect_return_time');
-            $table->string('return_time');
-            $table->string('penalty');
-            $table->primary(['book_id', 'user_id']);
+            // $table->string('borrow_time');
+            // $table->string('expect_return_time');
+            $table->string('return_time')->nullable();
+            // $table->string('penalty');
+            // $table->primary(['book_id', 'user_id']);
+            $table->unique(['book_id', 'user_id', 'created_at']);
             $table->foreign('book_id')->references('id')->on('books');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

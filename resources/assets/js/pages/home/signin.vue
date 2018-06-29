@@ -1,28 +1,18 @@
 <template>
-  <div class="container">
-    <div class="main">
-      <div class="logo">
-        <img src="" alt="">
-      </div>
-      <div class="content">
-        <div class="title">登录傻帽儿图书</div>
-        <div class="form">
-          <div class="username">
-            <input type="text" placeholder="用户名/邮箱">
-          </div>
-          <div class="pwd">
-            <input type="text" placeholder="密码">
-          </div>
-          <div class="login">登录</div>
-
-          <div class="forget">
-            <span>忘记密码?</span>
-            <span>注册账户</span>
-          </div>
-        </div>
-      </div>
+<div class="box">
+  <div class="containers">
+    <div class="headers">
+      Login
+    </div>
+    <div class="forms">
+      <el-form>
+        <input class="username" placeholder="用户名"></input>
+        <input class="pwd" placeholder=" 密码"></input>
+         <div class="login">登录</div>
+      </el-form>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -33,107 +23,73 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
+<style lang="scss" scoped>
+.box {
   width: 100vw;
   height: 100vh;
-  background-color: #222;
+  padding-top: 180px;
 
-  .main {
-    width: 360px;
-    height: 526px;
-    border-radius: 8px;
+  background-color: #f0f0f0;
+
+  .containers {
+    margin: 0 auto;
+    width: 500px;
+    height: 470px;
+
     background-color: #fff;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
 
-    .logo {
+    .headers {
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 60px;
 
-      img {
-        width: 70px;
-        height: 70px;
-        border-radius: 35px;
-        margin-top: 40px;
-        background-color: #ce329f;
-      }
+      color: #b4b4b4;
+      font-size: 20px;
+      background-color: rgb(244, 244, 244);
     }
 
-    .content {
-      margin: 17px 17px;
+    .forms {
+      display: flex;
+      // justify-content: center;
+      align-items: center;
 
-      width: 320px;
-      height: 262px;
+      width: 300px;
+      // height: 50px;
+      // padding-top: 20px;
 
-      .title {
+      .username {
+        width: 430px;
+        height: 65px;
+        background-color: rgb(240, 240, 240);
+        margin: 30px 30px;
+
+        border: none;
+      }
+      .pwd {
+        width: 430px;
+        height: 65px;
+        background-color: rgb(240, 240, 240);
+        margin: 15px 30px;
+
+        border: none;
+      }
+
+      .login {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 30px 30px;
+        // border: none;
 
-        font-size: 20px;
-        color: #ce329f;
-      }
+        width: 430px;
+        height: 65px;
 
-      .form {
-        width: 100%;
-        margin-top: 26px;
-
-        .username {
-          width: 100%;
-          input {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 9px 20px 9px; // width: 100%;
-            width: 280px;
-            height: 30px;
-            outline: 0;
-            border: 0;
-            background-color: #eee;
-          }
-        }
-
-        .pwd {
-          width: 100%;
-          margin-top: 10px;
-          input {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 9px 20px 9px;
-            width: 280px;
-            height: 30px;
-
-            outline: 0;
-            border: 0;
-            background-color: #eee;
-          }
-        }
-        .login {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 9px 20px 9px;
-          margin-top: 20px;
-          height: 30px;
-          border-radius: 3px;
-          background-color: #ce329f;
-          color: #fff;
-        }
-
-        .forget {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          /* // padding: 9px 20px 9px; */
-          margin-top: 25px;
-          height: 20px;
-          color: #ce329f;
-        }
+        background-color: rgb(33, 150, 243);
+        color: #fff;
       }
     }
   }
